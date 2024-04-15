@@ -49,10 +49,9 @@ const data = {
             imagen: 'https://kappaarg.vtexassets.com/arquivos/ids/230771/Imagen-1.jpg?v=638261923614600000',
             comentario: [
                 {
-                    nombre: '',
-                    comentario: '',
-                    imgane_de_perfil: ''
-
+                    nombre: 'Roque Perez',
+                    comentario: 'Los envios son gratis? muchas gracias',
+                    imagen_de_perfil: 'Roque-Perez.jpg'
                 }
             ]
         },
@@ -62,9 +61,9 @@ const data = {
             imagen: 'https://http2.mlstatic.com/D_NQ_NP_671397-MLU69775205422_062023-O.webp',
             comentario: [
                 {
-                    nombre: '',
-                    comentario: '',
-                    imgane_de_perfil: ''
+                    nombre: 'Roque Perez',
+                    comentario: 'Lindo producto! genial',
+                    imagen_de_perfil: 'Roque-Perez.jpg'
 
                 }
             ]
@@ -75,9 +74,9 @@ const data = {
             imagen: 'https://static.wixstatic.com/media/b7689f_bd4c9a7ae2df4550be5498266a905211~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg',
             comentario: [
                 {
-                    nombre: '',
-                    comentario: '',
-                    imgane_de_perfil: ''
+                    nombre: 'Roque Perez',
+                    comentario: 'Muy bonito',
+                    imagen_de_perfil: 'Roque-Perez.jpg'
 
                 }
             ]
@@ -88,9 +87,9 @@ const data = {
             imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrx_0O1swHn5AW8FtbvYxf5HNhg_h30_Vn24-yx-pVOA&s',
             comentario: [
                 {
-                    nombre: '',
-                    comentario: '',
-                    imgane_de_perfil: ''
+                    nombre: 'Roque Perez',
+                    comentario: 'Muy bueno, la mejor que vi',
+                    imagen_de_perfil: 'Roque-Perez.jpg'
 
                 }
             ]
@@ -103,7 +102,7 @@ const data = {
                 {
                     nombre: '',
                     comentario: '',
-                    imgane_de_perfil: ''
+                    imagen_de_perfil: ''
 
                 }
             ]
@@ -116,7 +115,7 @@ const data = {
                 {
                     nombre: '',
                     comentario: '',
-                    imgane_de_perfil: ''
+                    imagen_de_perfil: ''
 
                 }
             ]
@@ -129,7 +128,7 @@ const data = {
                 {
                     nombre: '',
                     comentario: '',
-                    imgane_de_perfil: ''
+                    imagen_de_perfil: ''
 
                 }
             ]
@@ -142,7 +141,7 @@ const data = {
                 {
                     nombre: '',
                     comentario: '',
-                    imgane_de_perfil: ''
+                    imagen_de_perfil: ''
 
                 }
             ]
@@ -155,7 +154,7 @@ const data = {
                 {
                     nombre: '',
                     comentario: '',
-                    imgane_de_perfil: ''
+                    imagen_de_perfil: ''
 
                 }
             ]
@@ -168,7 +167,7 @@ const data = {
                 {
                     nombre: '',
                     comentario: '',
-                    imgane_de_perfil: ''
+                    imagen_de_perfil: ''
 
                 }
             ]
