@@ -52,6 +52,17 @@ const data = {
                     nombre: 'Roque Perez',
                     comentario: 'Los envios son gratis? muchas gracias',
                     imagen_de_perfil: 'Roque-Perez.jpg'
+
+                },
+                {
+                    nombre: 'Lio Messi',
+                    comentario: 'me compraria 100!',
+                    imagen_de_perfil: 'Lio-Messi.jpg'
+                },
+                {
+                    nombre: 'Andres Fernandez',
+                    comentario: 'no me gusto',
+                    imagen_de_perfil: 'Andres-Fernandez.jpg'
                 }
             ]
         },
@@ -65,6 +76,16 @@ const data = {
                     comentario: 'Lindo producto! genial',
                     imagen_de_perfil: 'Roque-Perez.jpg'
 
+                },
+                {
+                    nombre: 'Lio Messi',
+                    comentario: 'no me gusta mucho sinceramente',
+                    imagen_de_perfil: 'Lio-Messi.jpg'
+                },
+                {
+                    nombre: 'Andres Fernandez',
+                    comentario: 'lo tenes de otro color?',
+                    imagen_de_perfil: 'Andres-Fernandez.jpg'
                 }
             ]
         },
@@ -78,6 +99,16 @@ const data = {
                     comentario: 'Muy bonito',
                     imagen_de_perfil: 'Roque-Perez.jpg'
 
+                },
+                {
+                    nombre: 'Lio Messi',
+                    comentario: 'me compro uno y le doy otro a mi hermano',
+                    imagen_de_perfil: 'Lio-Messi.jpg'
+                },
+                {
+                    nombre: 'Andres Fernandez',
+                    comentario: 'hay de otros tamaños?',
+                    imagen_de_perfil: 'Andres-Fernandez.jpg'
                 }
             ]
         },
@@ -91,6 +122,16 @@ const data = {
                     comentario: 'Muy bueno, la mejor que vi',
                     imagen_de_perfil: 'Roque-Perez.jpg'
 
+                },
+                {
+                    nombre: 'Lio Messi',
+                    comentario: 'mi tio quiere uno',
+                    imagen_de_perfil: 'Lio-Messi.jpg'
+                },
+                {
+                    nombre: 'Andres Fernandez',
+                    comentario: 'la mejor compra de la semana',
+                    imagen_de_perfil: 'Andres-Fernandez.jpg'
                 }
             ]
         },
@@ -100,10 +141,20 @@ const data = {
             imagen: 'https://ciudad-muebles.com.ar/wp-content/uploads/2023/02/400-70.jpg',
             comentario: [
                 {
-                    nombre: '',
-                    comentario: '',
-                    imagen_de_perfil: ''
+                    nombre: 'Roque Perez',
+                    comentario: 'buenisimooooo',
+                    imagen_de_perfil: 'Roque-Perez.jpg'
 
+                },
+                {
+                    nombre: 'Lio Messi',
+                    comentario: 'es genial',
+                    imagen_de_perfil: 'Lio-Messi.jpg'
+                },
+                {
+                    nombre: 'Andres Fernandez',
+                    comentario: 'quiero comprar!',
+                    imagen_de_perfil: 'Andres-Fernandez.jpg'
                 }
             ]
         },
@@ -113,10 +164,20 @@ const data = {
             imagen: 'https://www.tecnologia-informatica.com/wp-content/uploads/2018/08/caracteristicas-de-las-computadoras-1.jpeg',
             comentario: [
                 {
-                    nombre: '',
-                    comentario: '',
-                    imagen_de_perfil: ''
+                    nombre: 'Juan Fernandez',
+                    comentario: 'Muy bueno, la mejor que vi',
+                    imagen_de_perfil: 'Juan-Fernandez.jpg'
 
+                },
+                {
+                    nombre: 'Lisandro Zabala',
+                    comentario: 'lo mejor que hay en la pagina',
+                    imagen_de_perfil: 'Lisandro-Zabala.jpg'
+                },
+                {
+                    nombre: 'Roque Perez',
+                    comentario: 'es genial',
+                    imagen_de_perfil: 'Roque-Perez.jpg'
                 }
             ]
         },
@@ -126,10 +187,20 @@ const data = {
             imagen: 'https://tienda.personal.com.ar/images/720/webp/i_Phone_14_Pro_Deep_Purple_303ce73cf6.png',
             comentario: [
                 {
-                    nombre: '',
-                    comentario: '',
-                    imagen_de_perfil: ''
+                    nombre: 'Juan Fernandez',
+                    comentario: 'lo mejor precio-calidad',
+                    imagen_de_perfil: 'Juan-Fernandez.jpg'
 
+                },
+                {
+                    nombre: 'Lisandro Zabala',
+                    comentario: 'quiero 20! jaja!',
+                    imagen_de_perfil: 'Lisandro-Zabala.jpg'
+                },
+                {
+                    nombre: 'Juan Fernandez',
+                    comentario: 'muy bueno quierooo',
+                    imagen_de_perfil: 'Juan-Fernandez.jpg'
                 }
             ]
         },
@@ -139,10 +210,20 @@ const data = {
             imagen: 'https://images.fravega.com/f1000/2296f5cb8cfdc57969146a67e50edb5d.jpg',
             comentario: [
                 {
-                    nombre: '',
-                    comentario: '',
-                    imagen_de_perfil: ''
+                    nombre: 'Juan Fernandez',
+                    comentario: 'me encantaria comprarlo',
+                    imagen_de_perfil: 'Juan-Fernandez.jpg'
 
+                },
+                {
+                    nombre: 'Lisandro Zabala',
+                    comentario: 'me encantooo',
+                    imagen_de_perfil: 'Lisandro-Zabala.jpg'
+                },
+                {
+                    nombre: 'Lio Messi',
+                    comentario: 'envio como es?',
+                    imagen_de_perfil: 'Lio-Messi.jpg'
                 }
             ]
         },
@@ -152,10 +233,20 @@ const data = {
             imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQChG6c_8vN8ucRg174y_3T7YNqV8nNH8uIbwWFCWNleg&s',
             comentario: [
                 {
-                    nombre: '',
-                    comentario: '',
-                    imagen_de_perfil: ''
+                    nombre: 'Juan Fernandez',
+                    comentario: 'Muy fachero',
+                    imagen_de_perfil: 'Juan-Fernandez.jpg'
 
+                },
+                {
+                    nombre: 'Lisandro Zabala',
+                    comentario: 'quiero todos los que tenes',
+                    imagen_de_perfil: 'Lisandro-Zabala.jpg'
+                },
+                {
+                    nombre: 'Lisandro Zabala',
+                    comentario: 'la verdad que esta masomenos',
+                    imagen_de_perfil: 'Lisandro-Zabala.jpg'
                 }
             ]
         },
@@ -165,10 +256,20 @@ const data = {
             imagen: 'https://http2.mlstatic.com/D_NQ_NP_844329-MLA54129890218_032023-O.webp',
             comentario: [
                 {
-                    nombre: '',
-                    comentario: '',
-                    imagen_de_perfil: ''
+                    nombre: 'Juan Fernandez',
+                    comentario: 'me encantan tus productos',
+                    imagen_de_perfil: 'Juan-Fernandez.jpg'
 
+                },
+                {
+                    nombre: 'Lisandro Zabala',
+                    comentario: 'en cuanto llegaria?',
+                    imagen_de_perfil: 'Lisandro-Zabala.jpg'
+                },
+                {
+                    nombre: 'Andres Fernandez',
+                    comentario: 'top el producto',
+                    imagen_de_perfil: 'Andres-Fernandez.jpg'
                 }
             ]
         }
