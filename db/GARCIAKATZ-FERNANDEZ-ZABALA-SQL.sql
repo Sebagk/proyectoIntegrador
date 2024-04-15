@@ -1,6 +1,6 @@
-CREATE DATABASE proyecto_integrador_final;
+CREATE DATABASE proyecto_integrador_final_definitivo;
 
-USE proyecto_integrador_final;
+USE proyecto_integrador_final_definitivo;
 
 CREATE TABLE usuario(
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
@@ -47,7 +47,7 @@ INSERT INTO usuario
 VALUE(DEFAULT, 'juanfernandez@gmail.com', 'aguero29', '2004-06-19', 489299, 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.elgrafico.com.ar%2Farticulo%2Fprimera-division%2F40266%2Fproblemas-en-independiente-se-desgarro-saltita-gonzalez&psig=AOvVaw1Z3AIxHr6FfKaGjb51s2XR&ust=1712695603214000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNC7hMS-s4UDFQAAAAAdAAAAABAE', NULL, NULL, NULL);
 
 INSERT INTO usuario
-VALUE(DEFAULT, 'rodrigogala@gmail.com', 'galati19', '1985-03-29', 213299, 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg/330px-Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg');
+VALUE(DEFAULT, 'rodrigogala@gmail.com', 'galati19', '1985-03-29', 213299, 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg/330px-Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg', NULL, NULL, NULL);
 
 INSERT INTO usuario
 VALUE(DEFAULT, 'messilio@gmail.com', 'antonella2121', '1987-07-24', 553209, 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg/330px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg', NULL, NULL, NULL);
@@ -106,10 +106,10 @@ INSERT INTO comentarios
 VALUE(DEFAULT, "buenisimooooo",NULL,NULL,NULL,1,5);
 
 INSERT INTO comentarios
-VALUE(DEFAULT, "Muy bueno, la mejor que vi",NULL,NULL,NULL,2,11);
+VALUE(DEFAULT, "Muy bueno, la mejor que vi",NULL,NULL,NULL,2,6);
 
 INSERT INTO comentarios
-VALUE(DEFAULT, "lo mejor precio-calidad",NULL,NULL,NULL,2,12);
+VALUE(DEFAULT, "lo mejor precio-calidad",NULL,NULL,NULL,2,7);
 
 INSERT INTO comentarios
 VALUE(DEFAULT, "me encantaria comprarlo",NULL,NULL,NULL,2,8);
@@ -136,10 +136,10 @@ INSERT INTO comentarios
 VALUE(DEFAULT, "es genial",NULL,NULL,NULL,3,5);
 
 INSERT INTO comentarios
-VALUE(DEFAULT, "lo mejor que hay en la pagina",NULL,NULL,NULL,4,11);
+VALUE(DEFAULT, "lo mejor que hay en la pagina",NULL,NULL,NULL,4,6);
 
 INSERT INTO comentarios
-VALUE(DEFAULT, "quiero 20! jaja!",NULL,NULL,NULL,4,12);
+VALUE(DEFAULT, "quiero 20! jaja!",NULL,NULL,NULL,4,7);
 
 INSERT INTO comentarios
 VALUE(DEFAULT, "me encantooo",NULL,NULL,NULL,4,8);
