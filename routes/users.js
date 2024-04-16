@@ -4,7 +4,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/profile', usuariosController.profile);
-router.get('/registrarse', usuariosController.register);
+router.get('/register', usuariosController.register);
 router.get('/login', usuariosController.login);
 router.get('/profileedit', usuariosController.profileedit);
 
