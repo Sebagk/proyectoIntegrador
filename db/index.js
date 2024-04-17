@@ -47,7 +47,7 @@ const data = {
             nombre: 'Camiseta tigre', 
             descripcion:'Camiseta XL version jugador material pesado y frio',
             imagen: 'https://kappaarg.vtexassets.com/arquivos/ids/230771/Imagen-1.jpg?v=638261923614600000',
-            comentario: [
+            comentarios: [
                 {
                     nombre: 'Roque Perez',
                     comentario: 'Los envios son gratis? muchas gracias',
@@ -70,7 +70,7 @@ const data = {
             nombre: 'Termo Stanley',
             descripcion: 'Termo Stanley material metal color blanco',
             imagen: 'https://http2.mlstatic.com/D_NQ_NP_671397-MLU69775205422_062023-O.webp',
-            comentario: [
+            comentarios: [
                 {
                     nombre: 'Roque Perez',
                     comentario: 'Lindo producto! genial',
@@ -93,7 +93,7 @@ const data = {
             nombre: 'Peluche baby dragon',
             descripcion: 'Baby dragon peluche muy tierno',
             imagen: 'https://static.wixstatic.com/media/b7689f_bd4c9a7ae2df4550be5498266a905211~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg',
-            comentario: [
+            comentarios: [
                 {
                     nombre: 'Roque Perez',
                     comentario: 'Muy bonito',
@@ -116,7 +116,7 @@ const data = {
             nombre: 'Auriculares Razer kraken green',
             descripcion: 'Auriculares acolchados con microfono incluido',
             imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrx_0O1swHn5AW8FtbvYxf5HNhg_h30_Vn24-yx-pVOA&s',
-            comentario: [
+            comentarios: [
                 {
                     nombre: 'Roque Perez',
                     comentario: 'Muy bueno, la mejor que vi',
@@ -139,7 +139,7 @@ const data = {
             nombre: 'Mesa ratona',
             descripcion: 'Mesa ratona elevable multifuncion de 80x46cm',
             imagen: 'https://ciudad-muebles.com.ar/wp-content/uploads/2023/02/400-70.jpg',
-            comentario: [
+            comentarios: [
                 {
                     nombre: 'Roque Perez',
                     comentario: 'buenisimooooo',
@@ -162,7 +162,7 @@ const data = {
             nombre: 'Computadora de escritorio',
             descripcion: 'porcesador intel i7 de novena generación',
             imagen: 'https://www.tecnologia-informatica.com/wp-content/uploads/2018/08/caracteristicas-de-las-computadoras-1.jpeg',
-            comentario: [
+            comentarios: [
                 {
                     nombre: 'Juan Fernandez',
                     comentario: 'Muy bueno, la mejor que vi',
@@ -185,7 +185,7 @@ const data = {
             nombre: 'Iphone 14',
             descripcion: 'Color negro y con 256 gb de espacio',
             imagen: 'https://tienda.personal.com.ar/images/720/webp/i_Phone_14_Pro_Deep_Purple_303ce73cf6.png',
-            comentario: [
+            comentarios: [
                 {
                     nombre: 'Juan Fernandez',
                     comentario: 'lo mejor precio-calidad',
@@ -208,7 +208,7 @@ const data = {
             nombre: 'Reloj Garimng Forerunner',
             descripcion: 'Color negro y azul, con conexión bluetooth',
             imagen: 'https://images.fravega.com/f1000/2296f5cb8cfdc57969146a67e50edb5d.jpg',
-            comentario: [
+            comentarios: [
                 {
                     nombre: 'Juan Fernandez',
                     comentario: 'me encantaria comprarlo',
@@ -231,7 +231,7 @@ const data = {
             nombre: 'Mancuerna de 10kg',
             descripcion: 'Mancuernas de 10kg ideal para entrenar en tu casa',
             imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQChG6c_8vN8ucRg174y_3T7YNqV8nNH8uIbwWFCWNleg&s',
-            comentario: [
+            comentarios: [
                 {
                     nombre: 'Juan Fernandez',
                     comentario: 'Muy fachero',
@@ -254,7 +254,7 @@ const data = {
             nombre: 'Mate argentino',
             descripcion: 'Mate Camionero De Vidrio Cuero Vacuno Virola De Aluminio',
             imagen: 'https://http2.mlstatic.com/D_NQ_NP_844329-MLA54129890218_032023-O.webp',
-            comentario: [
+            comentarios: [
                 {
                     nombre: 'Juan Fernandez',
                     comentario: 'me encantan tus productos',

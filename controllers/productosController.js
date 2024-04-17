@@ -9,11 +9,8 @@ const productosController = {
         }
         return res.render('index',{
             mensaje : 'Novedades',
-            lista : resultado,
+            lista : resultado
         });
-    },
-    product : function(req, res){
-        return res.render('product');
     },
     productadd: function(req, res){
         return res.render('productadd');

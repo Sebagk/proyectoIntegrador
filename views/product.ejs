@@ -17,8 +17,17 @@
                     sit amet consectetur adipisicing elit. Tae ipsam amet eum, totam dolore libero illo unde? Consectetur dolorem neque
                     veritatis.</p>
             </article>
+            <% for (let i = 0; i < lista.length; i++) { %>
             <div class="col-12 col-lg-4">
                 <section class="comments">
+                    <article>
+                        <img src="<%= lista[i].imagen %>" alt="">
+                        <div class="data">
+                            <p class="user">
+                            <strong> <a href="profile.html">Nombre usuario: </a> </strong>
+                             <%= lista[i].comentario%></p>
+                        </div>
+                    </article>
                     <article>
                         <img src="https://via.placeholder.com/35" alt="">
                         <div class="data">
@@ -61,6 +70,7 @@
                                 Tempora doloribus enim aspernatur fugit corrupti suscipit sit dolore</p>
                         </div>
                     </article>
+                    <% } %>
 
                 </section>
                 <form class="form" action="" method="POST">

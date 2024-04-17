@@ -4,7 +4,7 @@
 
 /*====== Variables ======*/
 :root {
-  --yellow: #EAC926;
+  --yellow: #68a1d3;
   --dark-blue: #03264C;
   --light-blue: #1259c3;
   --gray: #666666;
@@ -66,6 +66,13 @@ hr {
 
 
 /*====== Main Header ======*/
+#Nombre{
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: xx-large;
+}
+
 .main-header {
   padding: 15px 0;
   background-color: var(--yellow);
