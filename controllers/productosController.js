@@ -10,6 +10,13 @@ const productosController = {
         return res.render('index',{
             mensaje : 'Novedades',
             lista : resultado
+        });       
+    },
+    product: function(req, res){
+        let idProduct = req.params.product
+        let resultado = db.productos[idProduct]
+        return res.render('product', {
+            lista: resultado
         });
     },
     productadd: function(req, res){

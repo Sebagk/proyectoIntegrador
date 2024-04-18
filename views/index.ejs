@@ -1,5 +1,8 @@
-<%- include('./partials/head')%>
 <%- include('./partials/header')%>
+
+<div class="banner">
+	<img src="images/img-home-banner.jpg" alt="Banner de ofertas">
+</div>
 
 <div class="container products-wrapper">
 		<div class="row">
@@ -10,7 +13,7 @@
 			<% for (let i = 0; i < lista.length; i++) { %>
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
-						<a href="http://localhost:3000/comments/<%= lista[i].id %>">
+						<a href="http://localhost:3000/product/<%= lista[i].id %>">
 							<figure class="product-box_image">
 								<img src="<%= lista[i].imagen %>" alt="<%= lista[i].nombre %>">
 							</figure>
