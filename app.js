@@ -24,6 +24,7 @@ app.use('/', indexRouter);
 app.use('/product', indexRouter);
 app.use('/users', usersRouter);
 app.use('/comments', commentsRouter);
+app.use('/profile', usersRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

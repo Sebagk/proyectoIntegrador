@@ -5,12 +5,36 @@
         <div class="col-12">
             <h2 class="products-title">Ingresar</h2>
         </div>
-        <!-- Show the "ultimos" products -->
-        <h2 class="col-12"> <i>///////////////////////////////////////// <br> Acá va el formulario de login. <br>
-        Debe cumplir con los puntos de la consigna y ser coherente con la tabla de la base de datos <br>
-        Eliminen estás líneas y coloquen el formulario. <br>
-        Recuerden todo lo que necesita tanto la etiqueta form como los campos input para operar correctamtente</i> <br>
-        ////////////////
+        <h2>			  
+            <div id="contenedor">
+                <div id="central">
+                    <div id="login">
+                        <div class="titulo">
+                            Bienvenido
+                        </div>
+                        <form method="get" action="#" id="loginform">
+                            <input type="text" for="nombre" name="usuario" placeholder="Usuario">
+                            
+                            <input type="password" for="contraseña" placeholder="Contraseña" name="password">
+                            
+                            <button type="submit" title="Ingresar" name="Ingresar">Ingresar</button>
+
+                        </form>
+                        <div style="display: flex; flex-direction: row;">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="recordarUsuario" style="width: 20px; height: 20px; margin-left: 0%; margin-right: 1%; ">
+                        <label class="form-check-label" for="exampleCheck1" name="recordarUsuario" style="margin-top: 0.8%;">Recordarme</label>
+                        </div>
+                        
+                        <div class="pie-form">
+                            <a href="#">¿Olvidaste tu contraseña?</a>
+                            <a href="register">¿No tienes Cuenta? Registrate</a>
+                        </div>
+                    </div>
+                    <div class="inferior">
+                        <a href="/">Volver</a>
+                    </div>
+                </div>
+            </div>
         </h2>
     </div>
 </div>

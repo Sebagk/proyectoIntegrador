@@ -5,13 +5,43 @@
         <div class="col-12">
             <h2 class="products-title">Registrate</h2>
         </div>
-        <!-- Show the "ultimos" products -->
-        <h2 class="col-12"> <i>///////////////////////////////////////// <br> Acá va el formulario de registro. <br>
-        Debe cumplir con los puntos de la consigna y ser coherente con la tabla de la base de datos <br>
-        Eliminen estás líneas y coloquen el formulario. <br>
-        Recuerden todo lo que necesita tanto la etiqueta form como los campos input para operar correctamtente</i> <br>
-        ////////////////
-        </h2>
+        <!-- Formulario de Registro a la web -->
+		<h2>
+			<div id="contenedor" style="width: 950px;">
+				<div id="central">
+					<div id="login" style="padding: 30px 45px; margin-top: 0%;">
+						<div class="titulo">
+							Creá tu cuenta
+						</div>
+						<form method="get"  id="loginform" enctype="multipart/form-data">
+							<input  type="text" name="email" placeholder="Email">
+
+							<input type="text" name="nombre" placeholder="Usuario">
+										
+							<input type="password" name="contraseña" placeholder="Contraseña">
+
+							<input type="date" name="nacimiento" placeholder="Fecha de Nacimiento">
+										
+							<input type="number" name="documento" placeholder="Numero de documento">
+										
+							<a>Foto de perfil</a>
+							<input type="file" name="fotoDePerfi" style="background-color: rgb(205 205 205)">
+
+							<button type="submit" title="Ingresar" name="Ingresar">Registrarme</button>
+
+						</form>
+							<div style="display: flex; flex-direction: row;">
+							<input type="checkbox" class="form-check-input" id="exampleCheck1" style="width: 20px; height: 20px; margin-left: 0%; margin-right: 1%; ">
+							<label class="form-check-label" for="exampleCheck1" style="margin-top: 0.8%;">Recordarme</label>
+							</div>
+						</div>
+						<div class="inferior">
+								<a href="/">Volver</a>
+						</div>
+                    </div>
+                </div>
+			</div>
+		</h2>
     </div>
 </div>
 

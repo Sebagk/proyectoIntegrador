@@ -6,7 +6,7 @@ const data = {
             contraseña: 'contraseña',
             fecha_nacimiento: '1955-06-09',
             dni: 132202,
-            imagen: "'https://conteudo.imguol.com.br/c/esporte/c5/2023/02/23/lenda-do-independiente-ricardo-enrique-bochini-posta-com-a-copa-intercontinental-1677151188011_v2_900x506.jpg"
+            imagen: "https://conteudo.imguol.com.br/c/esporte/c5/2023/02/23/lenda-do-independiente-ricardo-enrique-bochini-posta-com-a-copa-intercontinental-1677151188011_v2_900x506.jpg"
 
         },
     ],

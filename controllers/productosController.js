@@ -3,12 +3,10 @@ const db = require('../db/index');
 const productosController = { 
     index: function(req, res){
         let resultado = [];
-        let numComentarios = 3;
         for (let i = 0; i < db.productos.length; i++) {
             resultado.push(db.productos[i]);
         }
         return res.render('index',{
-            mensaje : 'Novedades',
             lista : resultado
         });       
     },
@@ -20,8 +18,17 @@ const productosController = {
         });
     },
     productadd: function(req, res){
-        return res.render('productadd');
+        return res.render('productadd')
     },
+    searchresults: function(req, res){
+        let resultado = [];
+        for (let i = 0; i < db.productos.length; i++) {
+            resultado.push(db.productos[i]);
+        }
+        return res.render('searchresults',{
+            lista : resultado
+        });
+    }       
 };
 
 module.exports = productosController;
