@@ -85,8 +85,9 @@ hr {
 }
 
 .main-header_credit-link {
-  font-size: 1.5em;
+  font-size: large;
   margin-top: 20px;
+  font-family: "Anton", sans-serif;
   text-align: center;
 }
 
@@ -178,9 +179,10 @@ hr {
 }
 
 .products-title {
-  font-size: 2.4em;
+  font-size: 35px;
   font-weight: 400;
-  color: var(--gray);
+  color: rgba(29, 17, 17, 0.5);
+  text-decoration: underline;
 }
 
 .product-box {
@@ -335,6 +337,11 @@ hr {
 .product-detail-title {
   font-weight: 400;
   font-size: 2.8em;
+}
+
+#editar{
+  font-family: "Kanit", sans-serif;
+  font-size: 30px;
 }
 
 .product-detail-description {
