@@ -65,6 +65,11 @@ hr {
 }
 
 
+.subtitle {
+  margin: 4px 0px;
+  color: var(--gray);
+}
+
 /*====== Main Header ======*/
 #Nombre{
   font-family: "Kanit", sans-serif;
