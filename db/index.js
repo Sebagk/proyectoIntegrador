@@ -11,7 +11,7 @@ const data = {
     ],
     productos: [
         {
-            id: 1,
+            id: 0,
             nombre: 'GRAPHIC SET IN NECK WHITE', 
             descripcion:'Remera blanca de cuello redono',
             imagen: 'https://levisarg.vtexassets.com/arquivos/ids/873638/2249135640_1.jpg?v=638484538310170000',
@@ -35,7 +35,7 @@ const data = {
             ]
         },
         {
-            id: 2,
+            id: 1,
             nombre: 'LEVIS HM POLO SNORKEL',
             descripcion: 'Polo blanca con diseño',
             imagen: 'https://levisarg.vtexassets.com/arquivos/ids/818830-500-auto?v=638314348913700000&width=500&height=auto&aspect=true',
@@ -59,7 +59,7 @@ const data = {
             ]
         },
         {
-            id: 3,
+            id: 2,
             nombre: 'VINTAGE FIT TEE OVERDYE VARSITY',
             descripcion: 'Remera vintage de color azul',
             imagen: 'https://levisarg.vtexassets.com/arquivos/ids/872692-500-auto?v=638442218279070000&width=500&height=auto&aspect=true',
@@ -83,7 +83,7 @@ const data = {
             ]
         },
         {
-            id: 4,
+            id: 3,
             nombre: 'GRAPHIC SET IN NECK TEE 501',
             descripcion: 'Remera negra con diseño',
             imagen: 'https://levisarg.vtexassets.com/arquivos/ids/823110-800-auto?v=638320364535600000&width=800&height=auto&aspect=true',
@@ -107,7 +107,7 @@ const data = {
             ]
         },
         {
-            id: 5,
+            id: 4,
             nombre: 'SS RELAXED FIT TEE "ALL OVER POSTER"',
             descripcion: 'Remera negra con logo de Levis',
             imagen: 'https://levisarg.vtexassets.com/arquivos/ids/659973-500-auto?v=638041464988200000&width=500&height=auto&aspect=true',
@@ -131,7 +131,7 @@ const data = {
             ]
         },
         {
-            id: 6,
+            id: 5,
             nombre: 'ARGENTINA LEVIS EXCLUSIVE',
             descripcion: 'Remera Levis ARGENTINA',
             imagen: 'https://levisarg.vtexassets.com/arquivos/ids/873528-1200-auto?v=638481849287400000&width=1200&height=auto&aspect=true',
@@ -155,7 +155,7 @@ const data = {
             ]
         },
         {
-            id: 7,
+            id: 6,
             nombre: 'GRAPHIC SET IN NECK LEVIS VARSITY',
             descripcion: 'Remera negra con Levis en el pecho',
             imagen: 'https://levisarg.vtexassets.com/arquivos/ids/782226-500-auto?v=638285203434330000&width=500&height=auto&aspect=true',
@@ -179,7 +179,7 @@ const data = {
             ]
         },
         {
-            id: 8,
+            id: 7,
             nombre: 'SS RELAEXD FIT TEE "BATIK"',
             descripcion: 'Remera color Caviar Batik',
             imagen: 'https://levisarg.vtexassets.com/arquivos/ids/872732-800-auto?v=638443029972170000&width=800&height=auto&aspect=true',
@@ -203,7 +203,7 @@ const data = {
             ]
         },
         {
-            id: 9,
+            id: 8,
             nombre: 'GRAPHIC SET IN NECK',
             descripcion: 'Remera color Forged Iron',
             imagen: 'https://levisarg.vtexassets.com/arquivos/ids/698247-500-auto?v=638163044333000000&width=500&height=auto&aspect=true',
@@ -227,7 +227,7 @@ const data = {
             ]
         },
         {
-            id: 10,
+            id: 9,
             nombre: 'SS RELAXED FIT GREEN',
             descripcion: 'Remera color verde',
             imagen: 'https://levisarg.vtexassets.com/arquivos/ids/745278-800-auto?v=638240002715800000&width=800&height=auto&aspect=true',
