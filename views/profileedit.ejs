@@ -13,27 +13,27 @@
                         <div class="titulo">
                             Editar mi perfil
                         </div>
-                        <form method="get" action="#" id="loginform" enctype="multipart/form-data">
-                            <input  type="email" name="email" value="<%= lista.email %>">
+                        <form method="get" action="#" id="loginform" enctype="multipart/form-data" class="profile-form">
+                            <input  type="email" name="email" placeholder="Email" value="<%= usuario.email %>" class="profile-form-input">
 
-                            <input type="text" name="nombre" value="<%= lista.nombre %>">
+                            <input type="text" name="nombre" placeholder="Nombre" value="<%= usuario.nombre %>" class="profile-form-input">
                             
-                            <input type="password"  name="contraseña" placeholder="Nueva contraseña">
+                            <input type="password"  name="contraseña" placeholder="Nueva contraseña" class="profile-form-input">
 
-                            <input type="date" name="nacimiento" value="<%= lista.fecha_nacimiento %>">
+                            <input type="date" name="nacimiento" value="<%= usuario.fecha_nacimiento %>" class="profile-form-input">
                             
-                            <input type="number" name="documento" value="<%= perfil.dni %>">
+                            <input type="number" name="documento" placeholder="DNI" value="<%= usuario.dni %>" class="profile-form-input">
                             
                             <a>Foto de perfil</a>
                             <input type="file" name="fotoDePerfi" style="background-color: rgb(205 205 205);
-                            padding: 7.2px;">
+                            padding: 7.2px;" class="foto-perfil-input">
 
-                            <button type="submit" title="GuardarCambios" name="GuardarCambios">Guardar cambios</button>
+                            <button type="submit" title="GuardarCambios" name="GuardarCambios" class="btn">Guardar cambios</button>
 
                         </form>
                     </div>
                     <div class="inferior">
-                        <a style="width: 25%;" href="/">Volver al inicio</a>
+                        <a style="width: 25%;" href="/"> Volver al inicio</a>
                     </div>
                 </div>
             </div>

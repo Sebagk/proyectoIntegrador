@@ -18,7 +18,9 @@ const productosController = {
         });
     },
     productadd: function(req, res){
-        return res.render('productadd')
+        return res.render('productadd', {
+            usuario: db.usuarios[0],
+        });
     },
     searchresults: function(req, res){
         let resultado = [];

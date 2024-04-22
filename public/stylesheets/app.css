@@ -75,7 +75,8 @@ hr {
 
 .main-header {
   padding: 15px 0;
-  background-color: var(--yellow);
+  color:var(--light-gray);
+  background-color: var(--dark-blue);
 }
 
 .main-header_home-link,
@@ -144,6 +145,7 @@ hr {
   border: 0px;
   cursor: pointer;
   font-size: 1em;
+  color: var(--light-gray);
 }
 
 .logout:hover{
@@ -161,11 +163,11 @@ hr {
 
 /*====== Banner ======*/
 .banner {
-  background-image: url(/images/img-home-banner.jpg);
+  background-image: url(/images/banner-levis.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100px;
+  height: 320px;
 }
 
 
@@ -466,6 +468,22 @@ textarea.form-input {
 }
 
 /*====== Profile ======*/
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.profile-form-input{
+  margin-bottom: 8px;
+  padding: 4px;
+}
+
+.foto-perfil-input {
+  padding: 4px;
+  margin-bottom: 8px;
+}
+  
 .info-usuario{
   border-bottom: 1px solid #ccc;
   padding-bottom: 30px;
@@ -474,6 +492,8 @@ textarea.form-input {
 
 .foto-perfil{
   border-radius: 50%;
+  width: 150px;
+  height: 150px;
 }
 
 .main-title{
@@ -482,10 +502,17 @@ textarea.form-input {
 }
 
 .btn{
-  background-color: #1259c3;
+  background-color: var(--light-blue);
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 200px;
   color: #fff;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.btn:hover {
+  background-color: var(--dark-blue);
+  cursor: pointer;
 }
 
 
@@ -495,10 +522,10 @@ textarea.form-input {
     margin-top: 0;
     text-align: right;
   }
-
+/* 
   .banner {
     height: 320px;
-  }
+  } */
 
   .btn-toggle-navbar {
     display: none;

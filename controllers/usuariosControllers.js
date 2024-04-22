@@ -2,25 +2,23 @@ const db = require('../db/index')
 
 const usuariosController = {
     profile: function(req, res){
-        let resultado = db;
-        return res.render('profile',{
-            lista : resultado
+        let resultado = db.usuarios[0];
+        return res.render('profile', {
+            usuario : resultado,
+            productos: db.productos
         });
     },
     register : function(req, res){
-        let resultado = db.usuarios;
-        return res.render('register', {
-            lista : resultado 
-        });
+        return res.render('register');
     },
     login: function(req, res){
-        return res.render('login')
+        return res.render('login');
     },
     profileedit : function(req, res){
-        let resultado = db.usuarios
+        let resultado = db.usuarios[0];
         return res.render('profileedit',{
-            lista: resultado
-        })
+            usuario: resultado
+        });
     }
 }
 
