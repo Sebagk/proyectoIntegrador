@@ -13,7 +13,7 @@ const data = {
         {
             id: 0,
             nombre: 'GRAPHIC SET IN NECK WHITE', 
-            descripcion:'Remera blanca de cuello redono',
+            descripcion:'Remera blanca de cuello redondo',
             imagen: 'https://levisarg.vtexassets.com/arquivos/ids/873638/2249135640_1.jpg?v=638484538310170000',
             comentarios: [
                 {
