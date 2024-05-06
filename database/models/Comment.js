@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes){
-    let alias = 'User'
+    let alias = 'Comment'
 
     let cols = {
         id:{
@@ -7,31 +7,25 @@ module.exports = function (sequelize, dataTypes){
             primaryKey: true,
             type: dataTypes.INTEGER,
         },
-        email:{
+        texto_comentario:{
             type: dataTypes.STRING,
         },
-        contraseña:{
-            type: dataTypes.STRING,
-        },
-        fecha_nacimiento:{
-            type: dataTypes.DATE,
-        },
-        dni:{
+        id_usuario:{
             type: dataTypes.INTEGER,
         },
-        texto:{
-            type: dataTypes.STRING,
+        id_productos:{
+            type: dataTypes.INTEGER,
         }
         }    
     }
 
     let config = {
-        tableName: 'usuario',
+        tableName: 'comentarios',
         timestamps: true,
         underscored: true
 
     }
 
 
-    let User = sequelize.define(alias, cols, config)
-    return User
+    let Comment = sequelize.define(alias, cols, config)
+    return Comment
