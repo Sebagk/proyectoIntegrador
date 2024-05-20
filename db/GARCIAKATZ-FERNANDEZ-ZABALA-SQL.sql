@@ -60,34 +60,34 @@ VALUE(DEFAULT, 'andufer@gmail.com', 'racingpasion', '2013-06-15', 454681, 'https
 
 SELECT * FROM productos;
 INSERT INTO productos
-VALUE(DEFAULT, "https://kappaarg.vtexassets.com/arquivos/ids/230771/Imagen-1.jpg?v=638261923614600000", "camiseta tigre", "Camiseta XL version jugador material pesado y frio", DEFAULT, DEFAULT, DEFAULT, 1);
+VALUE(DEFAULT, "https://levisarg.vtexassets.com/arquivos/ids/818830-500-auto?v=638314348913700000&width=500&height=auto&aspect=true", "LEVIS HM POLO SNORKEL", "Polo blanca con diseño", DEFAULT, DEFAULT, DEFAULT, 1);
 
 INSERT INTO productos
-VALUE(DEFAULT, "https://http2.mlstatic.com/D_NQ_NP_671397-MLU69775205422_062023-O.webp", "termo stanley", "termo stanley material metal color blanco", DEFAULT, DEFAULT, DEFAULT, 2);
+VALUE(DEFAULT, "https://levisarg.vtexassets.com/arquivos/ids/872692-500-auto?v=638442218279070000&width=500&height=auto&aspect=true", "VINTAGE FIT TEE OVERDYE VARSITY", "Remera vintage de color azul", DEFAULT, DEFAULT, DEFAULT, 2);
 
 INSERT INTO productos
-VALUE(DEFAULT, "https://static.wixstatic.com/media/b7689f_bd4c9a7ae2df4550be5498266a905211~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg", "peluche baby dragon", "baby dragon peluche muy tierno", DEFAULT, DEFAULT, DEFAULT, 3);
+VALUE(DEFAULT, "https://levisarg.vtexassets.com/arquivos/ids/823110-800-auto?v=638320364535600000&width=800&height=auto&aspect=true", "GRAPHIC SET IN NECK TEE 501", "Remera negra con diseño", DEFAULT, DEFAULT, DEFAULT, 3);
 
 INSERT INTO productos
-VALUE(DEFAULT, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrx_0O1swHn5AW8FtbvYxf5HNhg_h30_Vn24-yx-pVOA&s", "auriculares razer kraken green", "Auriculares alcochados con microfono incluido", DEFAULT, DEFAULT, DEFAULT, 4);
+VALUE(DEFAULT, "https://levisarg.vtexassets.com/arquivos/ids/659973-500-auto?v=638041464988200000&width=500&height=auto&aspect=true", "SS RELAXED FIT TEE 'ALL OVER POSTER'", "Remera negra con logo de Levis", DEFAULT, DEFAULT, DEFAULT, 4);
 
 INSERT INTO productos
-VALUE(DEFAULT, "https://ciudad-muebles.com.ar/wp-content/uploads/2023/02/400-70.jpg", "mesa ratona", "mesa ratona elevable multifuncion de 80x46cm", DEFAULT, DEFAULT, DEFAULT, 5);
+VALUE(DEFAULT, "https://levisarg.vtexassets.com/arquivos/ids/873528-1200-auto?v=638481849287400000&width=1200&height=auto&aspect=true", "ARGENTINA LEVIS EXCLUSIVE", "Remera Levis ARGENTINA", DEFAULT, DEFAULT, DEFAULT, 5);
 
 INSERT INTO productos
-VALUE(DEFAULT, 'https://www.tecnologia-informatica.com/wp-content/uploads/2018/08/caracteristicas-de-las-computadoras-1.jpeg', 'computadora de escritorio', 'porcesador intel i7 de novena generación', DEFAULT, DEFAULT, DEFAULT, 1);
+VALUE(DEFAULT, 'https://levisarg.vtexassets.com/arquivos/ids/782226-500-auto?v=638285203434330000&width=500&height=auto&aspect=true', 'GRAPHIC SET IN NECK LEVIS VARSITY', 'Remera negra con Levis en el pecho', DEFAULT, DEFAULT, DEFAULT, 1);
 
 INSERT INTO productos
-VALUE(DEFAULT, 'https://tienda.personal.com.ar/images/720/webp/i_Phone_14_Pro_Deep_Purple_303ce73cf6.png', 'iphone 14', 'color negro y con 256 gb de espacio', DEFAULT, DEFAULT, DEFAULT, 2);
+VALUE(DEFAULT, 'https://levisarg.vtexassets.com/arquivos/ids/872732-800-auto?v=638443029972170000&width=800&height=auto&aspect=true', "SS RELAEXD FIT TEE 'BATIK'", 'Remera color Caviar Batik', DEFAULT, DEFAULT, DEFAULT, 2);
 
 INSERT INTO productos
-VALUE(DEFAULT, 'https://images.fravega.com/f1000/2296f5cb8cfdc57969146a67e50edb5d.jpg', 'reloj garimng forerunner', 'color negro y azul, con conexión bluetooth', DEFAULT, DEFAULT, DEFAULT, 3);
+VALUE(DEFAULT, 'https://levisarg.vtexassets.com/arquivos/ids/698247-500-auto?v=638163044333000000&width=500&height=auto&aspect=true', 'GRAPHIC SET IN NECK', 'Remera color Forged Iron', DEFAULT, DEFAULT, DEFAULT, 3);
 
 INSERT INTO productos
-VALUE(DEFAULT, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQChG6c_8vN8ucRg174y_3T7YNqV8nNH8uIbwWFCWNleg&s', 'mancuerna de 10kg', 'mancuernas de 10kg ideal para entrenar en tu casa', DEFAULT, DEFAULT, DEFAULT, 4);
+VALUE(DEFAULT, 'https://levisarg.vtexassets.com/arquivos/ids/745278-800-auto?v=638240002715800000&width=800&height=auto&aspect=true', 'SS RELAXED FIT GREEN', 'Remera color verde', DEFAULT, DEFAULT, DEFAULT, 4);
 
 INSERT INTO productos
-VALUE(DEFAULT, 'https://http2.mlstatic.com/D_NQ_NP_844329-MLA54129890218_032023-O.webp', 'mate argentino', 'Mate Camionero De Vidrio Cuero Vacuno Virola De Aluminio', DEFAULT, DEFAULT, DEFAULT, 5); 
+VALUE(DEFAULT, 'https://levisarg.vtexassets.com/arquivos/ids/873638/2249135640_1.jpg?v=638484538310170000', 'GRAPHIC SET IN NECK WHITE', 'Remera blanca de cuello redondo', DEFAULT, DEFAULT, DEFAULT, 5); 
 
 SELECT * FROM comentarios;
 INSERT INTO comentarios
