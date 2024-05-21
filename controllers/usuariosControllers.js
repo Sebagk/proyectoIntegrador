@@ -13,12 +13,21 @@ const usuariosController = {
     register : function(req, res){
         return res.render('register');
     },
+    registerInfo: function(req, res){
+        let form = req.body;
+        database.User.create(form)
+        .then(function(result){
+            return res.redirect('/')
+        })
+        .catch(error => console.log(error))
+
+    },
     login: function(req, res){
         return res.render('login',);
     },
     loginInfo: function(req, res){
         let form = req.body;
-        database.productos.create(form)
+        database.User.create(form)
         .then(function(result){
             return res.redirect('/')
         })

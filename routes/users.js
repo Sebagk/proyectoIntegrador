@@ -6,6 +6,7 @@ var router = express.Router();
 router.get('/profile', usuariosController.profile);
 
 router.get('/register', usuariosController.register);
+router.post('/register', usuariosController.registerInfo);
 
 router.get('/login', usuariosController.login);
 router.post('/login', usuariosController.loginInfo);

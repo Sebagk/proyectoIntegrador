@@ -24,8 +24,8 @@ module.exports = function (sequelize, dataTypes){
         timestamps: true,
         underscored: true
 
-    }
+    };
 
 
-    let Comment = sequelize.define(alias, cols, config)
+    let Comment = sequelize.define(alias, cols, config)  //preguntar porque aparece ReferenceError: sequelize is not defined
     return Comment
