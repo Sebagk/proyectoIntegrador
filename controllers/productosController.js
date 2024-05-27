@@ -3,13 +3,20 @@ const db = require('../database/models')
 
 const productosController = { 
     index: function(req, res){
-        let resultado = [];
+        /*let resultado = [];
         for (let i = 0; i < db.productos.length; i++) {
             resultado.push(db.productos[i]);
         }
         return res.render('index',{
             lista : resultado
-        });       
+        });*/
+        db.Product.findAll()
+            .then(function(data){
+                return res.render("index", {lista : data})
+            })
+            .catch(function(error){
+                return console.log(error);
+            })
     },
     product: function(req, res){
         let idProduct = req.params.product
