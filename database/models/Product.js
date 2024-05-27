@@ -20,7 +20,7 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.INTEGER
         }
         }    
-    }
+   
 
     let config = {
         tableName: 'productos',
@@ -32,3 +32,4 @@ module.exports = function (sequelize, dataTypes){
 
     let Product = sequelize.define(alias, cols, config)
     return Product
+}

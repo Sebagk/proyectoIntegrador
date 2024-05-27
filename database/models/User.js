@@ -23,7 +23,7 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.STRING,
         }
         }    
-    }
+    
 
     let config = {
         tableName: 'usuario',
@@ -35,3 +35,4 @@ module.exports = function (sequelize, dataTypes){
 
     let User = sequelize.define(alias, cols, config)
     return User
+}
