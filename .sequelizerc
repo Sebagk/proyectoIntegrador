@@ -1,3 +1,5 @@
+const { spawn } = require('child_process')
+const { captureRejectionSymbol } = require('events')
 const path = require('path')
 
 module.exports = {
