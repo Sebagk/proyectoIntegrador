@@ -19,7 +19,7 @@ module.exports = function (sequelize, dataTypes){
         dni:{
             type: dataTypes.INTEGER,
         },
-        texto:{
+        imagen_de_perfil:{
             type: dataTypes.STRING,
         }
         }    
