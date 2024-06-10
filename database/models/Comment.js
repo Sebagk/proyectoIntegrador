@@ -24,6 +24,16 @@ module.exports = function (sequelize, dataTypes) {
     underscored: true,
   };
 
-  let Comment = sequelize.define(alias, cols, config); //preguntar porque aparece ReferenceError: sequelize is not defined
+  let Comment = sequelize.define(alias, cols, config); 
+    Comment.associate = function(models) {
+      Comment.belongsTo(models.User, {
+          as: "usuario",
+          foreignKey: "id_usuario"
+      })
+      Comment.belongsTo(models.Product, {
+          as: "productos",
+          foreignKey: "id_productos"
+      })
+  }
   return Comment;
 };

@@ -3,13 +3,6 @@ const db = require('../database/models')
 
 const productosController = { 
     index: function(req, res){
-        /*let resultado = [];
-        for (let i = 0; i < db.productos.length; i++) {
-            resultado.push(db.productos[i]);
-        }
-        return res.render('index',{
-            lista : resultado
-        });*/
         db.Product.findAll()
             .then(function(data){
                 return res.render("index", {lista : data})
@@ -24,7 +17,8 @@ const productosController = {
         return res.render('product', {
             lista: resultado
         });*/
-        db.Product.findByPk(req.params.product)
+        
+        db.Product.findByPk(req.params.product, {include: [{association:"comentarios"}, {association:"usuario"}]})
             .then(function(producto){
                 res.render('product', {lista:producto});
             })
