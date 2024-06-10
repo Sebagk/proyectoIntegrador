@@ -26,7 +26,7 @@ const productosController = {
         });*/
         db.Product.findByPk(req.params.product)
             .then(function(producto){
-                res.render('product', {lista:producto});
+                res.render('product', {lista:producto,});
             })
     },
     productadd: function(req, res){
