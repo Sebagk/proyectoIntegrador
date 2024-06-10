@@ -19,11 +19,15 @@ const productosController = {
             })
     },
     product: function(req, res){
-        let idProduct = req.params.product
+        /*let idProduct = req.params.product
         let resultado = db.productos[idProduct]
         return res.render('product', {
             lista: resultado
-        });
+        });*/
+        db.Product.findByPk(req.params.product)
+            .then(function(producto){
+                res.render('product', {lista:producto});
+            })
     },
     productadd: function(req, res){
         return res.render('productadd', {
