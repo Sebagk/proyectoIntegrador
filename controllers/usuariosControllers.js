@@ -1,4 +1,5 @@
 const db = require('../database/models')
+const { validationResult } = require('express-validator');
 
 
 const usuariosController = {
@@ -13,6 +14,7 @@ const usuariosController = {
         return res.render('register');
     },
     registerInfo: function(req, res){
+        let errors = validationResult(req);
         let form = req.body;
         database.User.create(form)
         .then(function(result){
