@@ -16,14 +16,14 @@
             </article>
 
             <div class="col-12 col-lg-4">
-                <% for (let i = 0; i < lista.comentario.length; i++) { %>    
+                <% for (let i = 0; i < lista.comentarios.length; i++) { %>    
                 <section class="comments">
                     <article>
-                        <img src="/images/users/<%= lista.comentario[i].imagen_de_perfil %>" alt="">
+                        <img src="/images/users/<%= lista.comentarios[i].imagen_de_perfil %>" alt="">
                         <div class="data">
                             <p class="user">
                             <strong><a href="http://localhost:3000/users/profile/<%= lista.comentarios[i].dni %>"><%= lista.comentarios[i].nombre %></a></strong>
-                             <%= lista.comentario[i].comentario %></p>
+                             <%= lista.comentarios[i].comentario %></p>
                         </div>
                     </article>
                 </section>
