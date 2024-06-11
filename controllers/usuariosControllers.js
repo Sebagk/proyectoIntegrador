@@ -15,12 +15,18 @@ const usuariosController = {
     },
     registerInfo: function(req, res){
         let errors = validationResult(req);
-        let form = req.body;
+        if (errors.isEmpty()) {
+            let user = req.body;
+
+            userId = database.User.create(user);
+            res.redirect("/")
+        }
+        /*let form = req.body;
         database.User.create(form)
         .then(function(result){
             return res.redirect('/')
         })
-        .catch(error => console.log(error))
+        .catch(error => console.log(error))*/
 
     },
     login: function(req, res){
