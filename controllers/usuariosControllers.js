@@ -16,10 +16,15 @@ const usuariosController = {
     registerInfo: function(req, res){
         let errors = validationResult(req);
         if (errors.isEmpty()) {
+            
             let user = req.body;
 
             userId = db.User.create(user);
             res.redirect("/")
+        } else {
+            return res.render('register', {errors: errors.array(), 
+                old: req.body
+            }) ;
         }
         /*let form = req.body;
         database.User.create(form)

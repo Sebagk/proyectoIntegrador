@@ -13,8 +13,15 @@
 						<div class="titulo">
 							Creá tu cuenta
 						</div>
+						<% if (locals.errors) {
+							errors.forEach(error => { %>
+							<p><%= error.msg %></p>
+						<% })
+						}
+						%>
+
 						<form method="post"  id="loginform" class="profile-form" enctype="multipart/form-data">
-							<input  type="text" name="email" placeholder="Email" class="profile-form-input" class="profile-form-input">
+							<input  type="text" name="email" placeholder="Email" class="profile-form-input" class="profile-form-input" value="<%= locals.old && old.email ? old.email %>">
 
 							<input type="text" name="nombre" placeholder="Nombre de usuario" class="profile-form-input">
 										
@@ -23,8 +30,6 @@
 							<input type="date" name="nacimiento" placeholder="Fecha de Nacimiento" class="profile-form-input">
 										
 							<input type="number" name="documento" placeholder="Numero de documento" class="profile-form-input">
-										
-
 
 							<button type="submit" title="Ingresar" name="Ingresar" class="btn">Registrarme</button>
 
