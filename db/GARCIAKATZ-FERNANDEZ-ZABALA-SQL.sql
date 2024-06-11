@@ -44,7 +44,7 @@ INSERT INTO usuario
 VALUE(DEFAULT, 'roqueperez@gmail.com', 'contraseña', '1955-06-09', 132202, 'https://conteudo.imguol.com.br/c/esporte/c5/2023/02/23/lenda-do-independiente-ricardo-enrique-bochini-posta-com-a-copa-intercontinental-1677151188011_v2_900x506.jpg', NULL, NULL, NULL);
 
 INSERT INTO usuario
-VALUE(DEFAULT, 'juanfernandez@gmail.com', 'aguero29', '2004-06-19', 489299, 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.elgrafico.com.ar%2Farticulo%2Fprimera-division%2F40266%2Fproblemas-en-independiente-se-desgarro-saltita-gonzalez&psig=AOvVaw1Z3AIxHr6FfKaGjb51s2XR&ust=1712695603214000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNC7hMS-s4UDFQAAAAAdAAAAABAE', NULL, NULL, NULL);
+VALUE(DEFAULT, 'juanfernandez@gmail.com', 'aguero29', '2004-06-19', 489299, 'https://www.elgrafico.com.ar/media/cache/pub_news_details_large/media/i/33/4c/334c4b51b76989eaf4901a445164564c0972c972.jpg', NULL, NULL, NULL);
 
 INSERT INTO usuario
 VALUE(DEFAULT, 'rodrigogala@gmail.com', 'galati19', '1985-03-29', 213299, 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg/330px-Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg', NULL, NULL, NULL);
