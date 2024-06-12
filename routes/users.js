@@ -5,11 +5,11 @@ const usuariosController = require('../controllers/usuariosControllers');
 
 
 const validaciones = [
-    body ("email").notEmpty().isEmail().withMessage("Debes completar el campo de email").bail(),
-    body ("nombre").notEmpty().isLength({ min: 3, max: 13 }).withMessage("Debes completar el campo de nombre").bail(),
-    body ("contraseña").notEmpty().withMessage("Debes completar el campo de contraseña").bail(),
-    body ("nacimiento").notEmpty().withMessage("Debes completar el campo de fecha nacimiento").bail(),
-    body ("documento").notEmpty().isLength({ min: 8, max: 8 }).isInt().withMessage("Debes completar el campo de documento").bail()
+    body ("email").isEmail().withMessage("Debes completar el campo de email"),
+    body ("nombre").isLength({ min: 3, max: 13 }).withMessage("Debes completar el campo de nombre"),
+    body ("contraseña").notEmpty().withMessage("Debes completar el campo de contraseña"),
+    body ("nacimiento").notEmpty().withMessage("Debes completar el campo de fecha nacimiento"),
+    body ("documento").isInt().withMessage("Debes completar el campo de documento")
 ]
 
 /* GET users listing. */

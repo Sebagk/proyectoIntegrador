@@ -15,7 +15,8 @@ const usuariosController = {
     },
     registerInfo: function(req, res){
         let errors = validationResult(req);
-        if (errors.isEmpty()) {
+        res.send(errors)
+        /*if (errors.isEmpty()) {
             
             let user = req.body;
 
