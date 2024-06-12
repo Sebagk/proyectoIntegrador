@@ -11,33 +11,46 @@ const usuariosController = {
         });
     },
     register : function(req, res){
-        return res.render('register');
+        if (req.session.user == undefined){
+            return res.render('register');
+        }
+        else{
+            res.redirect("/users/profile")
+        }
+        
     },
     registerInfo: function(req, res){
+
         let errors = validationResult(req);
-        res.send(errors)
-        /*if (errors.isEmpty()) {
+        // res.send(form)
+        if (errors.isEmpty()) {
             
             let user = req.body;
 
             userId = db.User.create(user);
             res.redirect("/")
-        } else {
+        } 
+        else {
             return res.render('register', {errors: errors.array(), 
                 old: req.body
             }) ;
         }
-        /*let form = req.body;
-        database.User.create(form)
-        .then(function(result){
-            return res.redirect('/')
-        })
-        .catch(error => console.log(error))*/
+        // let form = req.body;
+        // database.User.create(form)
+        // .then(function(result){
+        //     return res.redirect('/')
+        // })
+        // .catch(error => console.log(error))
 
     },
     login: function(req, res){
-        return res.render('login',);
-    },
+        if (req.session.user == undefined){
+            return res.render('login');
+        }
+        else{
+            res.redirect("/users/profile")
+        }
+            },
     loginInfo: function(req, res){
         let form = req.body;
         database.User.create(form)

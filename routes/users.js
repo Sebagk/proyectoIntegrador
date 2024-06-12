@@ -7,9 +7,9 @@ const usuariosController = require('../controllers/usuariosControllers');
 const validaciones = [
     body ("email").isEmail().withMessage("Debes completar el campo de email"),
     body ("nombre").isLength({ min: 3, max: 13 }).withMessage("Debes completar el campo de nombre"),
-    body ("contraseña").notEmpty().withMessage("Debes completar el campo de contraseña"),
-    body ("nacimiento").notEmpty().withMessage("Debes completar el campo de fecha nacimiento"),
-    body ("documento").isInt().withMessage("Debes completar el campo de documento")
+    body ("contrasenia").notEmpty().withMessage("Debes completar el campo de contraseña"),
+    body ("fecha_nacimiento").notEmpty().withMessage("Debes completar el campo de fecha nacimiento"),
+    body ("dni").isInt().withMessage("Debes completar el campo de documento")
 ]
 
 /* GET users listing. */

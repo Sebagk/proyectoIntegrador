@@ -7,10 +7,13 @@ module.exports = function (sequelize, dataTypes){
             primaryKey: true,
             type: dataTypes.INTEGER,
         },
+        usuario:{
+            type: dataTypes.STRING
+        },
         email:{
             type: dataTypes.STRING,
         },
-        contraseña:{
+        contrasenia:{
             type: dataTypes.STRING,
         },
         fecha_nacimiento:{

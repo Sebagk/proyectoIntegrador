@@ -11,13 +11,24 @@ const productosController = {
       });
   },
   product: function (req, res) {
-    db.Product.findByPk(req.params.product, {
+
+    let id = req.params.product
+
+    let criterio = {
       include: [
-        { association: "comentarios", include: [{ association: "usuario" }] }
-      ],
-    }).then(function (producto) {
-      res.render("product", { lista: producto });
-      //res.send(producto)
+        {association: "usuario"},
+        {association: "comentarios", include: [{ association: "usuario" }] },
+        
+      ]
+    }
+
+    db.Product.findByPk(id, criterio)
+    .then(function (producto) {
+      // return res.send(id)
+      return res.render("product", { lista: producto });
+    })
+    .catch(function (error) {
+      return console.log(error);
     });
   },
   productadd: function (req, res) {

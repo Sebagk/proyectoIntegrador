@@ -20,20 +20,24 @@
 						}
 						%>
 
-						<form method="post"  id="loginform" class="profile-form" enctype="multipart/form-data">
-							<input  type="text" name="email" placeholder="Email" class="profile-form-input" class="profile-form-input">
+						<form action="/users/register" method="post" id="loginform" class="profile-form">
 
-							<input type="text" name="nombre" placeholder="Nombre de usuario" class="profile-form-input">
-										
-							<input type="password" name="contraseña" placeholder="Contraseña" class="profile-form-input">
+							<input type="text" name="email" placeholder="Email" class="profile-form-input">
 
-							<input type="date" name="nacimiento" placeholder="Fecha de Nacimiento" class="profile-form-input">
-										
-							<input type="number" name="documento" placeholder="Numero de documento" class="profile-form-input">
+							<input type="text" name="nombre" placeholder="Nombre de usuario" class="profile-form-input"> 
 
-							<button type="submit" title="Ingresar" name="Ingresar" class="btn">Registrarme</button>
+							<input type="password" name="contrasenia" placeholder="Contraseña" class="profile-form-input">
+
+							<input type="date" name="fecha_nacimiento" placeholder="Fecha de Nacimiento" class="profile-form-input">
+
+							<input type="number" name="dni" placeholder="Numero de documento" class="profile-form-input">
+
+							<input type="text" name="imagen_de_perfil" placeholder="Imagen de Perfil"> 
+
+							<button type="submit" title="Ingresar" class="btn">Registrarme</button>
 
 						</form>
+
 							<div style="display: flex; flex-direction: row;">
 							<input type="checkbox" class="form-check-input" id="exampleCheck1" style="width: 20px; height: 20px; margin-left: 0%; margin-right: 1%; ">
 							<label class="form-check-label" for="exampleCheck1" style="margin-top: 0.8%;">Recordarme</label>
