@@ -18,7 +18,7 @@ const usuariosController = {
         if (errors.isEmpty()) {
             let user = req.body;
 
-            userId = database.User.create(user);
+            userId = db.User.create(user);
             res.redirect("/")
         }
         /*let form = req.body;
