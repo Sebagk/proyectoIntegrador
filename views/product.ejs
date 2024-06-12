@@ -22,7 +22,7 @@
                         <img src="<%= lista.comentarios[i].usuario.imagen_de_perfil %>" alt="">
                         <div class="data">
                             <p class="user">
-                            <strong><a href="http://localhost:3000/users/profile/<%= lista.comentarios[i].dni %>"><%= lista.comentarios[i].usuario.email%>: </a></strong>
+                            <strong><a href="/users/profile/<%= lista.comentarios[i].dni %>"><%= lista.comentarios[i].usuario.email%>: </a></strong>
                              <%= lista.comentarios[i].comentario %></p>
                         </div>
                     </article>

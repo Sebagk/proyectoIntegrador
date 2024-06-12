@@ -13,11 +13,11 @@ const productosController = {
   product: function (req, res) {
     db.Product.findByPk(req.params.product, {
       include: [
-        { association: "comentarios", include: [{ association: "usuario" }] },
-        { association: "usuario" },
+        { association: "comentarios", include: [{ association: "usuario" }] }
       ],
     }).then(function (producto) {
       res.render("product", { lista: producto });
+      //res.send(producto)
     });
   },
   productadd: function (req, res) {

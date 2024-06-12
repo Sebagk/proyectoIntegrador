@@ -1,9 +1,10 @@
 var express = require('express');
-const usuariosController = require('../controllers/usuariosControllers');
 var router = express.Router();
 const { body } = require('express-validator');
+const usuariosController = require('../controllers/usuariosControllers');
 
-const validations = [
+
+const validaciones = [
     body ("email").notEmpty().isEmail().withMessage("Debes completar el campo de email").bail(),
     body ("nombre").notEmpty().isLength({ min: 3, max: 13 }).withMessage("Debes completar el campo de nombre").bail(),
     body ("contraseña").notEmpty().withMessage("Debes completar el campo de contraseña").bail(),
@@ -15,7 +16,7 @@ const validations = [
 router.get('/profile', usuariosController.profile);
 
 router.get('/register', usuariosController.register);
-router.post('/register', validations, usuariosController.registerInfo);
+router.post('/register', validaciones, usuariosController.registerInfo);
 
 router.get('/login', usuariosController.login);
 router.post('/login', usuariosController.loginInfo);
