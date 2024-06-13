@@ -22,15 +22,19 @@
 
 						<form action="/users/register" method="post" id="loginform" class="profile-form">
 
-							<input type="text" name="email" placeholder="Email" class="profile-form-input">
+							<input type="text" name="email" placeholder="Email" class="profile-form-input"
+							value="<%= locals.old && old.email ? old.email : "" %>">
 
-							<input type="text" name="nombre" placeholder="Nombre de usuario" class="profile-form-input"> 
+							<input type="text" name="usuario" placeholder="Nombre de usuario" class="profile-form-input"
+							value="<%= locals.old && old.usuario ? old.usuario : "" %>"> 
 
 							<input type="password" name="contrasenia" placeholder="Contraseña" class="profile-form-input">
 
-							<input type="date" name="fecha_nacimiento" placeholder="Fecha de Nacimiento" class="profile-form-input">
+							<input type="date" name="fecha_nacimiento" placeholder="Fecha de Nacimiento" class="profile-form-input"
+							value="<%= locals.old && old.fecha_nacimiento ? old.fecha_nacimiento : "" %>">
 
-							<input type="number" name="dni" placeholder="Numero de documento" class="profile-form-input">
+							<input type="number" name="dni" placeholder="Numero de documento" class="profile-form-input"
+							value="<%= locals.old && old.dni ? old.dni : "" %>">
 
 							<input type="text" name="imagen_de_perfil" placeholder="Imagen de Perfil"> 
 

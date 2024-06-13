@@ -1,6 +1,6 @@
 const db = require('../database/models')
 const { validationResult } = require('express-validator');
-
+const bcrypt = require('bcryptjs');
 
 const usuariosController = {
     profile: function(req, res){
@@ -22,7 +22,7 @@ const usuariosController = {
     registerInfo: function(req, res){
 
         let errors = validationResult(req);
-        // res.send(form)
+        // res.send(errors)
         if (errors.isEmpty()) {
             
             let user = req.body;

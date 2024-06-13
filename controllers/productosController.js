@@ -14,15 +14,21 @@ const productosController = {
 
     let id = req.params.product
 
-    let criterio = {
+    // let criterio = {
+    //   include: [
+    //     {association: "usuario"},
+    //     {association: "comentarios", include: [{ association: "usuario" }] },
+        
+    //   ]
+    // }
+
+    db.Product.findByPk(id, {
       include: [
         {association: "usuario"},
         {association: "comentarios", include: [{ association: "usuario" }] },
         
       ]
-    }
-
-    db.Product.findByPk(id, criterio)
+    })
     .then(function (producto) {
       // return res.send(id)
       return res.render("product", { lista: producto });
