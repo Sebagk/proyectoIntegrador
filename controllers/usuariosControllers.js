@@ -67,6 +67,11 @@ const usuariosController = {
         })
         .catch(error => console.log(error))
     },
+    logout : function(req,res,){
+        req.session.user = null;
+        res.clearCookie('userId');
+        res.redirect("/")
+    },
     profileedit : function(req, res){
         let resultado = db.usuarios[0];
         return res.render('profileedit',{
