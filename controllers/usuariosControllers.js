@@ -22,10 +22,18 @@ const usuariosController = {
     registerInfo: function(req, res){
 
         let errors = validationResult(req);
+        let form = req.body
         // res.send(errors)
-        if (errors.isEmpty()) {
-            
-            let user = req.body;
+
+        if (errors.isEmpty()) {            
+            let user = {
+                usuario: form.usuario,
+                email: form.email,
+                contrasenia: bcrypt.hashSync(form.contrasenia, 10),
+                fecha_nacimiento: form.fecha_nacimiento,
+                dni: form.dni,
+                imagen_de_perfil: form.im
+            };
 
             userId = db.User.create(user);
             res.redirect("/")
