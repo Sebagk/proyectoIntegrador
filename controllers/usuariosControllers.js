@@ -68,7 +68,8 @@ const usuariosController = {
         .catch(error => console.log(error))
     },
     logout : function(req,res,){
-        req.session.user = null;
+        req.session.destroy();
+        //req.session.user = null;
         res.clearCookie('userId');
         res.redirect("/")
     },

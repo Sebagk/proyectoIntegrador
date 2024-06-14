@@ -33,7 +33,7 @@ router.get('/login', usuariosController.login);
 router.post('/login', usuariosController.loginInfo);
 
 router.get('/profileedit', usuariosController.profileedit);
-router.get('/logout', usuariosController.logout);
+router.post('/logout', usuariosController.logout);
 
 
 module.exports = router;
