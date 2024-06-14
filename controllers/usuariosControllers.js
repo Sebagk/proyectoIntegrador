@@ -32,7 +32,7 @@ const usuariosController = {
                 contrasenia: bcrypt.hashSync(form.contrasenia, 10),
                 fecha_nacimiento: form.fecha_nacimiento,
                 dni: form.dni,
-                imagen_de_perfil: form.im
+                imagen_de_perfil: form.imagen_de_perfil
             };
 
             userId = db.User.create(user);
