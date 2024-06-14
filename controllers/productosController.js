@@ -14,14 +14,6 @@ const productosController = {
 
     let id = req.params.product
 
-    // let criterio = {
-    //   include: [
-    //     {association: "usuario"},
-    //     {association: "comentarios", include: [{ association: "usuario" }] },
-        
-    //   ]
-    // }
-
     db.Product.findByPk(id, {
       include: [
         {association: "usuario"},
