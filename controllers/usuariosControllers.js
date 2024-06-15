@@ -58,14 +58,35 @@ const usuariosController = {
         else{
             res.redirect("/users/profile")
         }
-            },
+    },
     loginInfo: function(req, res){
-        let form = req.body;
+            db.User.findOne({where: {usuario: req.body.usuario}})
+            .then(function(user){
+            try {
+                if (user===null) throw Error("Usuario no existente")
+                if(!bcrypt.compareSync(req.body.password, user.contrasenia))
+                throw Error ("Contraseña incorrecta")
+            } catch(error) {
+                res.render('login', {error: error.message});
+            } 
+
+            if (bcrypt.compareSync(req.body.password, user.contrasenia)) {
+                req.session.user = user.dataValues;
+                if (!req.body.recordarUsuario) {
+                    res.cookie( 'userId' , user.dataValues.id, {maxAge: 1000 * 60 * 60 * 7}) 
+                }
+                res.redirect("/");
+            } 
+        })
+        .catch(function(error){
+            console.log(error);
+        })
+        /*let form = req.body;
         database.User.create(form)
         .then(function(result){
             return res.redirect('/')
         })
-        .catch(error => console.log(error))
+        .catch(error => console.log(error))*/
     },
     logout : function(req,res,){
         req.session.destroy();

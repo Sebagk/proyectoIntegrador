@@ -5,6 +5,12 @@
         <div class="col-12">
             <h2 class="products-title">Ingresar</h2>
         </div>
+        <% if (locals.errors) {
+            errors.forEach(error => { %>
+            <p><%= error.msg %></p>
+        <% })
+        }
+        %>
         <h2>			  
             <div id="contenedor">
                 <div id="central">
