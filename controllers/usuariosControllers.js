@@ -67,7 +67,8 @@ const usuariosController = {
                 if(!bcrypt.compareSync(req.body.password, user.contrasenia))
                 throw Error ("Contraseña incorrecta")
             } catch(error) {
-                res.render('login', {error: error.message});
+                res.render('login', {
+                    error: error.message});
             } 
 
             if (bcrypt.compareSync(req.body.password, user.contrasenia)) {
@@ -99,6 +100,9 @@ const usuariosController = {
         return res.render('profileedit',{
             usuario: resultado
         });
+    },
+    profileeditInfo: function (req,res) {
+        
     }
 }
 

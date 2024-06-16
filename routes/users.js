@@ -33,6 +33,8 @@ router.get('/login', usuariosController.login);
 router.post('/login', usuariosController.loginInfo);
 
 router.get('/profileedit', usuariosController.profileedit);
+router.post('/profileedit', usuariosController.profileeditInfo);
+
 router.post('/logout', usuariosController.logout);
 
 
