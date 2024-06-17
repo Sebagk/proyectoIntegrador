@@ -24,7 +24,7 @@ const validaciones = [
 ]
 
 /* GET users listing. */
-router.get('/profile', usuariosController.profile);
+router.get('/profile/id/:id', usuariosController.profile);
 
 router.get('/register', usuariosController.register);
 router.post('/register', validaciones, usuariosController.registerInfo);

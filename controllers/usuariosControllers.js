@@ -5,13 +5,14 @@ const { Association } = require('sequelize');
 
 const usuariosController = {
     profile: function(req, res){
-        let id = req.session.user.id ;
+        let id = req.params.id ;
         db.User.findByPk(id, {
             include: [
                 {association: "productos"}
             ]})
         .then(function (usuario){
-            return res.render("profile", {lista: usuario})
+            //return res.send(usuario)
+            return res.render("profile", {usuario: usuario})
         })
         .catch(function (error) {
             return console.log(error);

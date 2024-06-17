@@ -24,7 +24,7 @@ const productosController = {
       ]
     })
     .then(function (producto) {
-      // return res.send(id)
+      //return res.send(producto)
       return res.render("product", { lista: producto });
     })
     .catch(function (error) {
