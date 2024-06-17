@@ -3,7 +3,11 @@
 <div class="container products-wrapper">
     <div class="row">
         <div class="col-12">
-            <h2 class="products-title">Resultados de búsqueda: "<%= search %></h2>
+            <% if(lista.length > 0){ %>
+                <h2 class="products-title">Resultados de búsqueda: "<%= search %></h2>
+            <% }  else{ %>
+                <h2 class="products-title">Resultados de búsqueda: No hay resultados para su criterio de búsqueda</h2>
+            <% } %>
         </div>
         <!-- Show the "ultimos" products -->
         <div class="container products-wrapper">
