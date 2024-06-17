@@ -35,7 +35,7 @@ const usuariosController = {
                 imagen_de_perfil: form.imagen_de_perfil
             };
 
-            userId = db.User.create(user);
+            db.User.create(user);
             res.redirect("/")
         } 
         else {

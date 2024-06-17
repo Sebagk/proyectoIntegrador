@@ -40,7 +40,7 @@ app.use(function(req, res, next) {
   if (req.cookies.userId != undefined && req.session.user == undefined) {
       let id = req.cookies.userId;
 
-      db.Usuario.findByPk(id)
+      db.User.findByPk(id)
       .then(function(result) {
 
         req.session.user = result;

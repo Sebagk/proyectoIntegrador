@@ -1,4 +1,6 @@
 const db = require("../database/models");
+const op = db.Sequelize.Op;
+const { where } = require('sequelize');
 
 const productosController = {
   index: function (req, res) {
@@ -35,13 +37,27 @@ const productosController = {
     });
   },
   searchresults: function (req, res) {
-    let resultado = [];
-    for (let i = 0; i < db.productos.length; i++) {
-      resultado.push(db.productos[i]);
-    }
-    return res.render("searchresults", {
-      lista: resultado,
-    });
+    // let resultado = [];
+    // for (let i = 0; i < db.productos.length; i++) {
+    //   resultado.push(db.productos[i]);
+    // }
+    // return res.render("searchresults", {
+    //   lista: resultado,
+    // });
+    let search = req.query.search
+    db.Product.findAll({
+      where: {[op.or]: [
+        {nombre: {[op.like]: `%${search}%`}},
+        {descripcion: {[op.like]: `%${search}%`}}
+      ]}
+    })
+    .then(function(results){
+      // return res.send(results)
+      return res.render("searchresults", {
+        search: search,
+        lista: results
+      })
+    })
   },
 };
 
