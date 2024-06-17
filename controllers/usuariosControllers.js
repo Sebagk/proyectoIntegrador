@@ -1,14 +1,27 @@
 const db = require('../database/models')
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
+const { Association } = require('sequelize');
 
 const usuariosController = {
     profile: function(req, res){
-        let resultado = db.usuarios[0];
+        let id = req.session.user.id ;
+        db.User.findByPk(id, {
+            include: [
+                {association: "productos"}
+            ]})
+        .then(function (usuario){
+            return res.render("profile", {lista: usuario})
+        })
+        .catch(function (error) {
+            return console.log(error);
+          });
+        
+        /*let resultado = db.usuarios[0];
         return res.render('profile', {
             usuario : resultado,
             productos: db.productos
-        });
+        })*/;
     },
     register : function(req, res){
         if (req.session.user == undefined){

@@ -4,7 +4,7 @@
   <div class="row">
     <div class="img-container offset-3 col-2">
       <img
-        src="/images/users/<%= usuario.imagen_de_perfil %>"
+        src="<%= usuario.imagen_de_perfil %>"
         alt="foto de perfil"
         class="foto-perfil"
       />
@@ -12,7 +12,7 @@
     <div class="data-container col-6">
       <div class="d-flex align-items-center">
         <h1 class="main-title">
-          <%= usuario.nombre %>
+          <%= usuario.usuario %>
           <a href="/users/profileedit">
             <i class="fas fa-cog"></i>
           </a>
@@ -22,9 +22,7 @@
       <h5 class="subtitle"><%= usuario.email %></h5>
       <div>
         <ul class="">
-          <li>5 productos</li>
-          <li>30 seguidores</li>
-          <li>6 comentarios</li>
+          <li>Total productos cargados: <%= usuario.productos.length %></li>
         </ul>
       </div>
     </div>
