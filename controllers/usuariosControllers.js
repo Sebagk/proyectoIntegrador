@@ -73,7 +73,7 @@ const usuariosController = {
             res.redirect("/users/profile")
         }
     },
-    loginInfo: function(req, res){
+    /*loginInfo: function(req, res){
             db.User.findOne({where: {usuario: req.body.usuario}})
             .then(function(user){
             try {
@@ -95,14 +95,43 @@ const usuariosController = {
         })
         .catch(function(error){
             console.log(error);
-        })
-        /*let form = req.body;
-        database.User.create(form)
-        .then(function(result){
-            return res.redirect('/')
-        })
-        .catch(error => console.log(error))*/
+        })*/
+
+
+    processLogin: function(req, res) {
+        let errors = validationResult(req)
+
+
+        if (errors.isEmpty()){
+            //procesar el controlador normalmente
+            db.User.findOne({
+                where: [{usuario: req.body.usuario}]
+            })
+            .then(function (usuarioEncontrado) {
+                req.session.user = {
+                    usuario : usuarioEncontrado.usuario,
+                    email : usuarioEncontrado.email
+                }
+                //return res.send(req.body)
+                if(req.body.recordarme != undefined){
+                    res.cookie('userId', 'el dato que quiero guardar', {maxAge: 1000*60*123123123})
+                }
+
+                return res.redirect('/')
+            })
+            .catch(function(e){
+                console.log(e);
+            })
+
+        } else {
+            return res.render('login', {errors: errors.mapped()})
+        }
     },
+
+
+
+
+
     logout : function(req,res,){
         req.session.destroy();
         //req.session.user = null;
