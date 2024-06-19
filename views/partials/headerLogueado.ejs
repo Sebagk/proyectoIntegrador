@@ -50,12 +50,12 @@
             </ul>
 
             <ul class="right-navbar">
-                <li><a href="localhost:3000/profile">
-                        <%= usuario.nombre %> <i class="fas fa-user"></i>
+                <li><a href="/users/profile/id/<%= locals.user.id %>">
+                        <%= locals.user.usuario %> <i class="fas fa-user"></i>
                     </a>
                 </li>
                 <li>
-                    <form action="/logout" method="get" style="display: inline;">
+                    <form action="/users/logout" method="post" style="display: inline;">
                         <button class="logout" class="header-text" type="submit">
                             Cerrar sesión <i class="fas fa-sign-in-alt"></i>
                         </button>

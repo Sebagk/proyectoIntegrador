@@ -70,7 +70,7 @@ const usuariosController = {
             return res.render('login');
         }
         else{
-            res.redirect("/users/profile")
+            res.redirect("/users/profile/" + req.session.user.id)
         }
     },
     /*loginInfo: function(req, res){
