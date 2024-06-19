@@ -1,6 +1,12 @@
 var express = require('express');
 var router = express.Router();
 const productosController = require('../controllers/productosController');
+const { body } = require('express-validator');
+
+
+const commentValidaciones = [
+    body('comment').notEmpty().withMessage('El comentario no puede estar vacio').isLength({min: 3}).withMessage('El comentario debe tener al menos 3 caracteres')
+]
 
 router.get('/', productosController.index);
 

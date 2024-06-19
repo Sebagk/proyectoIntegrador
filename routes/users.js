@@ -3,7 +3,6 @@ var router = express.Router();
 const { body } = require('express-validator');
 const usuariosController = require('../controllers/usuariosControllers');
 const db = require('../database/models');
-const { where } = require('sequelize');
 const bcrypt = require('bcryptjs');
 
 
