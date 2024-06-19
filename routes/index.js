@@ -15,6 +15,7 @@ router.get('/product/productadd', productosController.productadd);
 router.get('/product/searchresults', productosController.searchresults);
 router.get('/product/id/:product', productosController.product);
 
+router.post('/product/id/:product', commentValidaciones, productosController.commentProcess)
 
 
 module.exports = router;

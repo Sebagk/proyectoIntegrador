@@ -1,6 +1,7 @@
 const db = require("../database/models");
 const op = db.Sequelize.Op;
 const { where } = require('sequelize');
+const { validationResult } = require('express-validator')
 
 const productosController = {
 
@@ -42,6 +43,15 @@ const productosController = {
     return res.render("productadd", {
       usuario: db.usuarios[0],
     });
+  },
+
+  commentProcess: function(req, res){
+    let errors = validationResult(req)
+    let form = req.body
+    if (errors.isEmpty()) {
+      
+    }
+
   },
   
   searchresults: function (req, res) {
