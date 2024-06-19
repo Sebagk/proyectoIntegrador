@@ -40,9 +40,16 @@ const productosController = {
   },
 
   productadd: function (req, res) {
-    return res.render("productadd", {
-      usuario: db.usuarios[0],
-    });
+    if (req.session.user != undefined) {
+      return res.render('productadd')
+  }
+  else {
+      return res.redirect("/users/login");
+  }
+  },
+  
+  processProductadd: function (req, res) {
+    form = req.body
   },
 
   commentProcess: function(req, res){
@@ -53,7 +60,7 @@ const productosController = {
     }
 
   },
-  
+
   searchresults: function (req, res) {
     // let resultado = [];
     // for (let i = 0; i < db.productos.length; i++) {

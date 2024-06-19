@@ -11,6 +11,7 @@ const commentValidaciones = [
 router.get('/', productosController.index);
 
 router.get('/product/productadd', productosController.productadd);
+router.post('/product/productadd', productosController.processProductadd);
 
 router.get('/product/searchresults', productosController.searchresults);
 router.get('/product/id/:product', productosController.product);
