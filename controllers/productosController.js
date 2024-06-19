@@ -3,6 +3,7 @@ const op = db.Sequelize.Op;
 const { where } = require('sequelize');
 
 const productosController = {
+
   index: function (req, res) {
     db.Product.findAll({
       include: [
@@ -18,10 +19,9 @@ const productosController = {
         return console.log(error);
       });
   },
+
   product: function (req, res) {
-
     let id = req.params.product
-
     db.Product.findByPk(id, {
       include: [
         {association: "usuario"},
@@ -37,11 +37,13 @@ const productosController = {
       return console.log(error);
     });
   },
+
   productadd: function (req, res) {
     return res.render("productadd", {
       usuario: db.usuarios[0],
     });
   },
+  
   searchresults: function (req, res) {
     // let resultado = [];
     // for (let i = 0; i < db.productos.length; i++) {

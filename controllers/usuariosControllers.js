@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const { Association } = require('sequelize');
 
 const usuariosController = {
+    
     profile: function(req, res){
         let id = req.params.id ;
         db.User.findByPk(id, {
@@ -24,21 +25,20 @@ const usuariosController = {
             productos: db.productos
         })*/;
     },
+
     register : function(req, res){
         if (req.session.user == undefined){
             return res.render('register');
         }
         else{
             res.redirect("/users/profile")
-        }
-        
+        };   
     },
-    registerInfo: function(req, res){
 
+    registerInfo: function(req, res){
         let errors = validationResult(req);
         let form = req.body
         // res.send(errors)
-
         if (errors.isEmpty()) {            
             let user = {
                 usuario: form.usuario,
@@ -48,23 +48,16 @@ const usuariosController = {
                 dni: form.dni,
                 imagen_de_perfil: form.imagen_de_perfil
             };
-
             db.User.create(user);
             res.redirect("/")
         } 
         else {
             return res.render('register', {errors: errors.array(), 
                 old: req.body
-            }) ;
+            });
         }
-        // let form = req.body;
-        // database.User.create(form)
-        // .then(function(result){
-        //     return res.redirect('/')
-        // })
-        // .catch(error => console.log(error))
-
     },
+    
     login: function(req, res){
         if (req.session.user == undefined){
             return res.render('login');
@@ -73,35 +66,9 @@ const usuariosController = {
             res.redirect("/users/profile/" + req.session.user.id)
         }
     },
-    /*loginInfo: function(req, res){
-            db.User.findOne({where: {usuario: req.body.usuario}})
-            .then(function(user){
-            try {
-                if (user===null) throw Error("Usuario no existente")
-                if(!bcrypt.compareSync(req.body.password, user.contrasenia))
-                throw Error ("Contraseña incorrecta")
-            } catch(error) {
-                res.render('login', {
-                    error: error.message});
-            } 
-
-            if (bcrypt.compareSync(req.body.password, user.contrasenia)) {
-                req.session.user = user.dataValues;
-                if (!req.body.recordarUsuario) {
-                    res.cookie( 'userId' , user.dataValues.id, {maxAge: 1000 * 60 * 60 * 7}) 
-                }
-                res.redirect("/");
-            } 
-        })
-        .catch(function(error){
-            console.log(error);
-        })*/
-
 
     processLogin: function(req, res) {
         let errors = validationResult(req)
-
-
         if (errors.isEmpty()){
             //procesar el controlador normalmente
             db.User.findOne({
@@ -116,13 +83,11 @@ const usuariosController = {
                 if(req.body.recordarme != undefined){
                     res.cookie('userId', 'el dato que quiero guardar', {maxAge: 1000*60*123123123})
                 }
-
                 return res.redirect('/')
             })
             .catch(function(e){
                 console.log(e);
             })
-
         } else {
             return res.render('login', {errors: errors.mapped(), 
                 old: req.body
@@ -130,22 +95,20 @@ const usuariosController = {
         }
     },
 
-
-
-
-
     logout : function(req,res,){
         req.session.destroy();
         //req.session.user = null;
         res.clearCookie('userId');
         res.redirect("/")
     },
+
     profileedit : function(req, res){
         let resultado = db.usuarios[0];
         return res.render('profileedit',{
             usuario: resultado
         });
     },
+
     profileeditInfo: function (req,res) {
         
     }
