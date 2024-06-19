@@ -4,8 +4,14 @@ const { where } = require('sequelize');
 
 const productosController = {
   index: function (req, res) {
-    db.Product.findAll()
+    db.Product.findAll({
+      include: [
+        {association: 'usuario'},
+        {association: 'comentarios'}
+      ]
+    })
       .then(function (data) {
+        // return res.send(data)
         return res.render("index", { lista: data });
       })
       .catch(function (error) {
@@ -49,7 +55,12 @@ const productosController = {
       where: {[op.or]: [
         {nombre: {[op.like]: `%${search}%`}},
         {descripcion: {[op.like]: `%${search}%`}}
-      ]}
+      ]},
+      // order: [["createdAt", "DESC"]]
+      include: [
+        {association: "usuario"},
+        {association: "comentarios"}
+      ]
     })
     .then(function(results){
       // return res.send(results)

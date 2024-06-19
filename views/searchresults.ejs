@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-12">
             <% if(lista.length > 0){ %>
-                <h2 class="products-title">Resultados de búsqueda: "<%= search %></h2>
+                <h2 class="products-title">Resultados de búsqueda: "<%= search %>"</h2>
             <% }  else{ %>
                 <h2 class="products-title">Resultados de búsqueda: No hay resultados para su criterio de búsqueda</h2>
             <% } %>
@@ -23,7 +23,7 @@
                                 <article class="product-box_data">
                                     <h2><%= lista[i].nombre %></h2>
                                     <p><%= lista[i].descripcion %></p>
-                                    <p>Comentarios: 3</p>
+                                    <p><a href="/users/profile/id/<%= lista[i].usuario.id %>"><%= lista[i].usuario.usuario %></a></p>
                                 </article>
                             </a>
                         </section>

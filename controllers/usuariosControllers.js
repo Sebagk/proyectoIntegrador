@@ -124,7 +124,9 @@ const usuariosController = {
             })
 
         } else {
-            return res.render('login', {errors: errors.mapped()})
+            return res.render('login', {errors: errors.mapped(), 
+                old: req.body
+            })
         }
     },
 

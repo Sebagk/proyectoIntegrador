@@ -42,7 +42,7 @@ const loginValidaciones = [
         .custom(function(value, {req}){
 
             return db.User.findOne({
-                where: { usuario: value }})
+                where: { usuario: req.body.usuario }})
             .then(function(user){
                 if(user != undefined){ 
 
