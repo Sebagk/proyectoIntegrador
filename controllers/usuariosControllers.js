@@ -48,9 +48,13 @@ const usuariosController = {
                 dni: form.dni,
                 imagen_de_perfil: form.imagen_de_perfil
             };
-            db.User.create(user);
-            res.redirect("/")
-        } 
+            db.User.create(user)
+            .then(function(results){
+                return res.redirect("/")
+            })
+            .catch(function(e){
+                console.log(e);
+            })        } 
         else {
             return res.render('register', {errors: errors.array(), 
                 old: req.body

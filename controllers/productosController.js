@@ -53,11 +53,24 @@ const productosController = {
   },
 
   commentProcess: function(req, res){
-    let errors = validationResult(req)
-    let form = req.body
-    if (errors.isEmpty()) {
-      
-    }
+    // let errors = validationResult(req)
+    // let form = req.body
+    // res.send(form)
+    // if (errors.isEmpty()) {
+    //   db.Comment.create({
+    //     lista: form.comment,
+    //     id_usuario: req.session.user.id,
+    //     id_productos: req.params.product}
+    //   )
+    //   .then(function(results){
+    //     return res.render('/product/id/' + req.params.product)
+    //   })
+    // }
+    // else{
+    //   return res.render('register', {errors: errors.array(), 
+    //     old: req.body
+    // });
+    // }
 
   },
 
