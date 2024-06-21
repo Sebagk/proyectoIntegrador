@@ -20,13 +20,10 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.INTEGER
         }
         }    
-   
-
     let config = {
         tableName: 'productos',
         timestamps: false,
         underscored: true
-
     }
 
 

@@ -1,6 +1,6 @@
 const db = require("../database/models");
 const op = db.Sequelize.Op;
-const { where } = require('sequelize');
+//const { where } = require('sequelize');
 const { validationResult } = require('express-validator')
 
 const productosController = {
@@ -49,7 +49,26 @@ const productosController = {
   },
   
   processProductadd: function (req, res) {
-    form = req.body
+  let form = req.body;
+  let errors = validationResult(req);
+
+    if (errors.isEmpty()) {
+      let product = {
+        nombre: form.nombre,
+        descripcion: form.descripcion,
+        imagen: "../public/logo-mercado-liebre.jpg"
+    };
+    db.Product.create(product)
+    .then(function(results){
+        return res.redirect("/product/id/" + results.id)
+    })
+    .catch(function(error){
+        console.log(error);
+    })} else {
+      // return res.send(errors.mapped());
+      return res.send(errors.mapped());        
+    }
+
   },
 
   commentProcess: function(req, res){

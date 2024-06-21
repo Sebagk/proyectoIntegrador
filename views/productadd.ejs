@@ -8,17 +8,22 @@
         <div class="col-12">
             <h2 class="products-title">Agregar productos</h2>
         </div>
+        <p>Errores: </p>
+        <% if(locals.errors && errors.nombre){; %>
+            <p><%= errors.nombre.msg %></p>
+        <% } %>
+        <% if(locals.errors && errors.descripcion){; %>
+            <p><%= errors.descripcion.msg %></p>
+        <% } %>
         <!-- Show the "ultimos" products -->
         <h2>
             <div id="contenedor" style="width: 950px;">
                 <div id="central">
                     <div id="login" style="padding: 30px 45px">
-                        <form method="post" action="#" id="loginform" enctype="multipart/form-data" class="profile-form">
+                        <form method="post" action="" id="loginform" enctype="multipart/form-data" class="profile-form">
                             <input  type="text" name="nombre" placeholder="Nombre del producto" class="profile-form-input">
                             
                             <input type="text" name="descripcion" placeholder="Descripción" class="profile-form-input">
-
-                            <input type="text" name="color" placeholder="Color" class="profile-form-input">
 
                             <!---<input type="text" name="imagenDeProducto" placeholder="Imagen del producto" class="profile-form-input">-->
 

@@ -1,10 +1,10 @@
 const db = require('../database/models')
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
-const { Association } = require('sequelize');
+//const { Association } = require('sequelize');
 
 const usuariosController = {
-    
+
     profile: function(req, res){
         let id = req.params.id ;
         db.User.findByPk(id, {
@@ -54,8 +54,7 @@ const usuariosController = {
             })
             .catch(function(e){
                 console.log(e);
-            })        } 
-        else {
+            })} else {
             return res.render('register', {errors: errors.array(), 
                 old: req.body
             });
