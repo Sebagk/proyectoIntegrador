@@ -68,7 +68,6 @@ const productosController = {
       // return res.send(errors.mapped());
       return res.send(errors.mapped());        
     }
-
   },
 
   commentProcess: function(req, res){

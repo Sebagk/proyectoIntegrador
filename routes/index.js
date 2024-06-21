@@ -16,13 +16,13 @@ const commentValidaciones = [
 
 router.get('/', productosController.index);
 
-router.get('/product/productadd', productosController.productadd);
-router.post('/product/productadd', productValidaciones, productosController.processProductadd);
+router.get('/productadd', productosController.productadd);
+router.post('/productadd', productValidaciones, productosController.processProductadd);
 
-router.get('/product/searchresults', productosController.searchresults);
-router.get('/product/id/:product', productosController.product);
+router.get('/searchresults', productosController.searchresults);
+router.get('/id/:product', productosController.product);
 
-router.post('/product/id/:product', commentValidaciones, productosController.commentProcess)
+router.post('/id/:product', commentValidaciones, productosController.commentProcess)
 
 
 module.exports = router;

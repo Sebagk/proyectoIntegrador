@@ -56,7 +56,7 @@ const loginValidaciones = [
 ]
 
 /* GET users listing. */
-router.get('/profile/id/:id', usuariosController.profile);
+router.get('/id/:id', usuariosController.profile);
 
 router.get('/register', usuariosController.register);
 router.post('/register', validaciones, usuariosController.registerInfo);
