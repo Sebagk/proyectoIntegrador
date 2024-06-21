@@ -7,7 +7,7 @@ const bcrypt = require('bcryptjs');
 
 
 const validaciones = [
-    body ("email").isEmail().withMessage("Debes completar el campo de email")
+    body ("email").isEmail().withMessage("Debes completar el campo de Email")
     .custom(function(value){
         return db.User.findOne({
             where: {email: value},
@@ -18,10 +18,11 @@ const validaciones = [
             }
         })
     }),
-    body ("usuario").notEmpty().withMessage("Debes completar el campo de nombre"),
-    body ("contrasenia").notEmpty().withMessage("Debes completar el campo de contraseña").isLength({min: 4}).withMessage('La contraseña debe tener al menos 4 caracteres'),
-    body ("fecha_nacimiento").notEmpty().withMessage("Debes completar el campo de fecha nacimiento"),
-    body ("dni").isInt().withMessage("Debes completar el campo de documento")
+    body("usuario").notEmpty().withMessage("Debes completar el campo de Nombre"),
+    body("contrasenia").notEmpty().withMessage("Debes completar el campo de Contraseña").isLength({min: 4}).withMessage('La contraseña debe tener al menos 4 caracteres'),
+    body("fecha_nacimiento").notEmpty().withMessage("Debes completar el campo de Fecha de Nacimiento"),
+    body("dni").isInt().withMessage("Debes completar el campo de Documento"),
+    body("imagen_de_perfil").notEmpty().withMessage("Debes completar el campo Imagen")
 ]
 
 const loginValidaciones = [

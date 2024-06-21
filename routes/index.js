@@ -4,9 +4,9 @@ const productosController = require('../controllers/productosController');
 const { body } = require('express-validator');
 
 const productValidaciones = [
-    body('nombre').notEmpty().withMessage('El campo nombre es obligatorio.'),
-    body('descripcion').notEmpty().withMessage('El campo descripción es obligatorio.'),
-    //agregar imagen
+    body('nombre').notEmpty().withMessage('El campo Nombre es obligatorio.'),
+    body('descripcion').notEmpty().withMessage('El campo Descripción es obligatorio.'),
+    body('imagen').notEmpty().withMessage('El campo Imagen es obligatorio')
 ]
 
 const commentValidaciones = [
