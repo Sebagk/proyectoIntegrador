@@ -51,16 +51,16 @@ const productosController = {
   processProductadd: function (req, res) {
   let form = req.body;
   let errors = validationResult(req);
-
+  //return res.send(form)
     if (errors.isEmpty()) {
       let product = {
         nombre: form.nombre,
         descripcion: form.descripcion,
-        imagen: "../public/logo-mercado-liebre.jpg"
+        imagen: form.imagen
     };
     db.Product.create(product)
-    .then(function(results){
-        return res.redirect("/product/id/" + results.id)
+    .then(function(lista){
+        return res.redirect("/product/id/" + lista.id)
     })
     .catch(function(error){
         console.log(error);

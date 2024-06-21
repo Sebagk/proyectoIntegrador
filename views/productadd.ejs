@@ -20,14 +20,11 @@
             <div id="contenedor" style="width: 950px;">
                 <div id="central">
                     <div id="login" style="padding: 30px 45px">
-                        <form method="post" action="" id="loginform" enctype="multipart/form-data" class="profile-form">
-                            <input  type="text" name="nombre" placeholder="Nombre del producto" class="profile-form-input">
-                            
+                        <form method="post" action="/product/productadd" id="loginform" class="profile-form">
+                            <input type="text" name="nombre" placeholder="Nombre del producto" class="profile-form-input">
                             <input type="text" name="descripcion" placeholder="Descripción" class="profile-form-input">
-
-                            <!---<input type="text" name="imagenDeProducto" placeholder="Imagen del producto" class="profile-form-input">-->
-
-                           <button type="submit" title="Ingresar" name="Ingresar" class="btn">Subir producto</button> 
+                            <input type="text" name="imagen" placeholder="imagen del producto (url)" class="profile-form-input">
+                            <button type="submit" title="Ingresar" name="Ingresar" class="btn">Subir producto</button> 
                         </form>
                     </div>
                     <div class="inferior">
