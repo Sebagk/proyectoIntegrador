@@ -56,7 +56,8 @@ const productosController = {
       let product = {
         nombre: form.nombre,
         descripcion: form.descripcion,
-        imagen: form.imagen
+        imagen: form.imagen,
+        id_usuario: req.session.user.id
     };
     db.Product.create(product)
     .then(function(lista){
@@ -93,13 +94,6 @@ const productosController = {
   },
 
   searchresults: function (req, res) {
-    // let resultado = [];
-    // for (let i = 0; i < db.productos.length; i++) {
-    //   resultado.push(db.productos[i]);
-    // }
-    // return res.render("searchresults", {
-    //   lista: resultado,
-    // });
     let search = req.query.search
     db.Product.findAll({
       where: {[op.or]: [

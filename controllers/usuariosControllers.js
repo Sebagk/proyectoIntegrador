@@ -78,24 +78,12 @@ const usuariosController = {
                 where: [{usuario: req.body.usuario}]
             })
             .then(function (usuarioEncontrado) {
-                req.session.user = {
-                    usuario : usuarioEncontrado.usuario,
-                    email : usuarioEncontrado.email
-                }
-                //return res.send(req.body)
+                req.session.user = usuarioEncontrado
                 if(req.body.recordarme != undefined){
-                    res.cookie('userId', 'el dato que quiero guardar', {maxAge: 1000*60*123123123})
+                    res.cookie('userId', usuarioEncontrado.id , {maxAge: 1000*60*123123123})
                 }
                 return res.redirect('/')
-            })
-            .catch(function(e){
-                console.log(e);
-            })
-        } else {
-            return res.render('login', {errors: errors.mapped(), 
-                old: req.body
-            })
-        }
+            })}
     },
 
     logout : function(req,res,){
