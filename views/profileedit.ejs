@@ -16,22 +16,33 @@
                         <div class="titulo">
                             Editar mi perfil
                         </div>
-                        <form method="post" action="#" id="loginform" enctype="multipart/form-data" class="profile-form">
-                            <input  type="email" name="email" placeholder="Email" value="<%= usuario.email %>" class="profile-form-input">
+                        <% if (locals.errors) {
+							errors.forEach(error => { %>
+							<p><%= error.msg %></p>
+						<% })
+						}
+						%>
 
-                            <input type="text" name="nombre" placeholder="Nombre" value="<%= usuario.nombre %>" class="profile-form-input">
-                            
-                            <input type="password" name="contrasenia" placeholder="Nueva contraseña" class="profile-form-input">
+                        <form action="/users/profileedit" method="post" id="loginform" class="profile-form">
 
-                            <input type="date" name="fecha_nacimiento" value="<%= usuario.fecha_nacimiento %>" class="profile-form-input">
-                            
-                            <input type="number" name="dni" placeholder="DNI" value="<%= usuario.dni %>" class="profile-form-input">
-                            
-                            <a>Foto de perfil</a>
-                            <input type="file" name="fotoDePerfi" style="background-color: rgb(205 205 205);
-                            padding: 7.2px;" class="foto-perfil-input">
+                            <input type="text" name="email" placeholder="Email" class="profile-form-input"
+                            value="<%= usuario.email %>">
 
-                            <button type="submit" title="GuardarCambios" name="GuardarCambios" class="btn">Guardar cambios</button>
+                            <input type="text" name="usuario" placeholder="Nombre de usuario" class="profile-form-input"
+                            value="<%= usuario.usuario %>"> 
+
+                            <input type="password" name="contrasenia" placeholder="Contraseña" class="profile-form-input">
+
+                            <input type="date" name="fecha_nacimiento" placeholder="Fecha de nacimiento" class="profile-form-input"
+                            value="<%= usuario.fecha_nacimiento %>">
+
+                            <input type="number" name="dni" placeholder="Numero de documento" class="profile-form-input"
+                            value="<%= usuario.dni %>">
+
+                            <input type="text" name="imagen_de_perfil" placeholder="Imagen de perfil (URL)" class="profile-form-input"
+                            value="<%= usuario.imagen_de_perfil %>">
+
+                            <button type="submit" title="Ingresar" class="btn">Actualizar datos</button>
 
                         </form>
                     </div>

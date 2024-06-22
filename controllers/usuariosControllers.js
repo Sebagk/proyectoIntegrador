@@ -94,20 +94,28 @@ const usuariosController = {
     },
 
     profileedit : function(req, res){
-        let resultado = db.usuarios[0];
-        return res.render('profileedit',{
-            usuario: resultado
-        });
+        let id = req.session.user.id  
+        //cambiar la condicion de aca abajo para que tambien coincida el id
+        if (req.session.user != undefined) {  
+            db.User.findByPk(id)
+            .then(function (resultado){
+                return res.render('profileedit', {usuario: resultado})
+            })
+            .catch(function(e){
+                console.log(e);
+            })
+        }
+        else {
+            return res.redirect("/");
+        }
     },
 
     profileeditInfo: function (req,res) {
-        let id = req.params.id ;
+        let id = req.session.user.id;
         let form = req.body;
         let errors = validationResult(req);
-        
+        //return res.send(errors)
         if (errors.isEmpty()){
-            let contraseña = bcrypt.hashSync(form.contrasenia, 10);
-            form.contrasenia = contraseña
             let user = {
                 usuario: form.usuario,
                 email: form.email,
@@ -117,16 +125,18 @@ const usuariosController = {
                 imagen_de_perfil: form.imagen_de_perfil
 
         };
-        db.User.update(user),
-        {where: {id:id}}
+        db.User.update(user, {where: {id:id}})
         .then(function(results){
-            req.session.user = user
-            return res.redirect(`/users/profile/id/${id}`);
-        }
-        
+            return res.redirect(`/users/id/${id}`);
+        })
+        .catch(function(e){
+            console.log(e);
+        }) 
 
-    )
-
+    }else {
+        return res.render('profileedit', {errors: errors.array(), 
+            old: req.body
+        });
     }
 }}
 

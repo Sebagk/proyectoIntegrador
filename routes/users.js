@@ -68,7 +68,7 @@ const editValidations = [
             }
         })
     }),
-    body('nombre').notEmpty().withMessage("Debes completar el campo de Nombre"),
+    body('usuario').notEmpty().withMessage("Debes completar el campo de Usuario"),
     body('contrasenia').notEmpty().withMessage("Debes completar el campo de Contraseña").isLength({min: 4}).withMessage('La contraseña debe tener al menos 4 caracteres'),
     body("fecha_nacimiento").notEmpty().withMessage("Debes completar el campo de Fecha de Nacimiento"),
     body("dni").isInt().withMessage("Debes completar el campo de Documento"),
@@ -84,7 +84,7 @@ router.get('/login', usuariosController.login);//mostrar vista de Login
 router.post('/login', loginValidaciones, usuariosController.processLogin);//Procesar Login
 
 router.get('/profileedit', usuariosController.profileedit);
-router.post('/profileedit/id/:id', editValidations, usuariosController.profileeditInfo);
+router.post('/profileedit', validaciones, usuariosController.profileeditInfo);
 
 router.post('/logout', usuariosController.logout);
 
