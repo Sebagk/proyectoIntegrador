@@ -101,8 +101,33 @@ const usuariosController = {
     },
 
     profileeditInfo: function (req,res) {
+        let id = req.params.id ;
+        let form = req.body;
+        let errors = validationResult(req);
         
+        if (errors.isEmpty()){
+            let contraseña = bcrypt.hashSync(form.contrasenia, 10);
+            form.contrasenia = contraseña
+            let user = {
+                usuario: form.usuario,
+                email: form.email,
+                contrasenia: bcrypt.hashSync(form.contrasenia, 10),
+                fecha_nacimiento: form.fecha_nacimiento,
+                dni: form.dni,
+                imagen_de_perfil: form.imagen_de_perfil
+
+        };
+        db.User.update(user),
+        {where: {id:id}}
+        .then(function(results){
+            req.session.user = user
+            return res.redirect(`/users/profile/id/${id}`);
+        }
+        
+
+    )
+
     }
-}
+}}
 
 module.exports = usuariosController
