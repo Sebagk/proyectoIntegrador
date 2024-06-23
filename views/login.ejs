@@ -15,13 +15,11 @@
                         <div class="titulo">
                             Bienvenido
                         </div>
-                        <p>Errores: </p>
-                            <% if(locals.errors && errors.usuario){; %>
-                                <p><%= errors.usuario.msg %></p>
-                            <% } %>
-                            <% if(locals.errors && errors.password){; %>
-                                <p><%= errors.password.msg %></p>
-                            <% } %>
+                        <% if (locals.errors) {
+							errors.forEach(error => { %>
+							<p><%= error.msg %></p>
+						<% })
+                        }%>
                             
                         <form method="post" action="/users/login" id="loginform" class="profile-form">
                             <input type="text" for="nombre" name="usuario" placeholder="Nombre de usuario" class="profile-form-input" 

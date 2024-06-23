@@ -7,7 +7,9 @@
     <div class="d-flex align-items-center">
         <h2 class="products-title"><%= lista.nombre %></h2> 
         <p class="product-detail-description">
-            <a id="editar" href="/product/productedit">Editar</a>
+            <% if(locals.user != undefined && locals.user.id == lista.id_usuario){ %>
+                <a id="editar" href="/product/productedit">Editar</a>
+            <% } %>
         </p>
     </div>
     <div class="product-detail">

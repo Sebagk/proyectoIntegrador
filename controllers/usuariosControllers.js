@@ -8,12 +8,13 @@ const usuariosController = {
     profile: function(req, res){
         let id = req.params.id ;
         db.User.findByPk(id, {
+            order: [["createdAt", "DESC"]],
             include: [
                 {association: "productos"}
             ]})
         .then(function (usuario){
             //return res.send(usuario)
-            return res.render("profile", {usuario: usuario})
+            return res.render("profile", {usuario: usuario, id: id})
         })
         .catch(function (error) {
             return console.log(error);
@@ -31,14 +32,14 @@ const usuariosController = {
             return res.render('register');
         }
         else{
-            res.redirect("/users/profile")
+            res.redirect("/users/id/" + req.session.user.id)
         };   
     },
 
     registerInfo: function(req, res){
         let errors = validationResult(req);
         let form = req.body
-        // res.send(errors)
+        // return res.send(errors)
         if (errors.isEmpty()) {            
             let user = {
                 usuario: form.usuario,
@@ -66,12 +67,13 @@ const usuariosController = {
             return res.render('login');
         }
         else{
-            res.redirect("/users/profile/" + req.session.user.id)
+            res.redirect("/users/id/" + req.session.user.id)
         }
     },
 
     processLogin: function(req, res) {
         let errors = validationResult(req)
+        // return res.send(errors)
         if (errors.isEmpty()){
             //procesar el controlador normalmente
             db.User.findOne({
@@ -83,7 +85,16 @@ const usuariosController = {
                     res.cookie('userId', usuarioEncontrado.id , {maxAge: 1000*60*123123123})
                 }
                 return res.redirect('/')
+            })
+            .catch(function(e){
+                console.log(e);
             })}
+        else{
+            res.render('login', {errors: errors.array(), 
+                old: req.body
+            })
+        }
+            
     },
 
     logout : function(req,res,){
@@ -99,6 +110,7 @@ const usuariosController = {
         if (req.session.user != undefined) {  
             db.User.findByPk(id)
             .then(function (resultado){
+                // return res.send(resultado)
                 return res.render('profileedit', {usuario: resultado})
             })
             .catch(function(e){

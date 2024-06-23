@@ -8,18 +8,18 @@
         <div class="col-12">
             <h2 class="products-title">Agregar productos</h2>
         </div>
-        <p>Errores: </p>
-        <% if(locals.errors && errors.nombre){; %>
-            <p><%= errors.nombre.msg %></p>
-        <% } %>
-        <% if(locals.errors && errors.descripcion){; %>
-            <p><%= errors.descripcion.msg %></p>
-        <% } %>
+        
         <!-- Show the "ultimos" products -->
         <h2>
             <div id="contenedor" style="width: 950px;">
                 <div id="central">
                     <div id="login" style="padding: 30px 45px">
+                        
+                        <% if (locals.errors) {
+                            errors.forEach(error => { %>
+                            <p><%= error.msg %></p>
+                        <% })
+                        }%>
                         <form method="post" action="/product/productadd" id="loginform" class="profile-form">
                             <input type="text" name="nombre" placeholder="Nombre del producto" class="profile-form-input">
                             <input type="text" name="descripcion" placeholder="Descripción" class="profile-form-input">
@@ -28,7 +28,7 @@
                         </form>
                     </div>
                     <div class="inferior">
-                        <a id="editar" href="/users/profile">Volver</a>
+                        <a id="editar" href="/">Volver</a>
                     </div>
                 </div>
             </div>

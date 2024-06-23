@@ -7,6 +7,7 @@ const productosController = {
 
   index: function (req, res) {
     db.Product.findAll({
+      order: [["createdAt", "DESC"]],
       include: [
         {association: 'usuario'},
         {association: 'comentarios'}
@@ -67,7 +68,7 @@ const productosController = {
         console.log(error);
     })} else {
       // return res.send(errors.mapped());
-      return res.send(errors.mapped());        
+      return res.render("productadd", {errors: errors.array(), old: req.body});        
     }
   },
 
@@ -100,7 +101,7 @@ const productosController = {
         {nombre: {[op.like]: `%${search}%`}},
         {descripcion: {[op.like]: `%${search}%`}}
       ]},
-      // order: [["createdAt", "DESC"]]
+      order: [["createdAt", "DESC"]],
       include: [
         {association: "usuario"},
         {association: "comentarios"}

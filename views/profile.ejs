@@ -16,9 +16,11 @@
       <div class="d-flex align-items-center">
         <h1 class="main-title">
           <%= usuario.usuario %>
-          <a href="/users/profileedit">
+          <% if(locals.user != undefined && locals.user.id == id){ %>
+            <a href="/users/profileedit">
             <i class="fas fa-cog"></i>
           </a>
+          <% } %>
         </h1>
       </div>
       <h5 class="subtitle"><%= usuario.email %></h5>
@@ -52,7 +54,7 @@
           <article class="product-box_data">
             <h2><%= usuario.productos[i].nombre %></h2>
             <p><%= usuario.productos[i].descripcion %></p>
-            <p><a href="/users/profile/id/<%= usuario.id %>"><%= usuario.usuario %></a></p>
+            <p><a href="/users/id/<%= usuario.id %>"><%= usuario.usuario %></a></p>
           </article>
         </a>
       </section>
