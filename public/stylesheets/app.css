@@ -20,6 +20,7 @@
 }
 
 html,
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -33,6 +34,7 @@ body {
 }
 
 ul,
+
 ol {
   list-style: none;
   margin: 0;
@@ -123,6 +125,12 @@ hr {
   cursor: pointer;
 }
 
+#search{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
 
 /*====== Main Navbar ======*/
 .btn-toggle-navbar {
@@ -186,7 +194,7 @@ hr {
 .products-title {
   font-size: 35px;
   font-weight: 400;
-  color: rgba(29, 17, 17, 0.5);
+  color: rgba(0, 0, 0, 0.582);
   text-decoration: underline;
 }
 
@@ -472,9 +480,8 @@ hr {
   padding: 0 15px;
 }
 
-.error{
+.errores{
   color: rgb(209, 0, 0);
-  font-size: 1.4em;
 }
 
 textarea.form-input {
@@ -487,7 +494,10 @@ textarea.form-input {
 .profile-form {
   display: flex;
   flex-direction: column;
-  
+}
+
+#login {
+  padding: 40px;
 }
 
 .profile-form-input{

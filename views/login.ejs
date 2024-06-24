@@ -4,7 +4,7 @@
 	<%- include('./partials/header')  %>
 <% } %>
 <div class="container products-wrapper">
-    <div class="row">
+    <div class="row" style="display: flex; flex-direction: column;">
         <div class="col-12">
             <h2 class="products-title">Ingresar</h2>
         </div>
@@ -18,7 +18,7 @@
                         <hr>
                         <% if (locals.errors) {
 							errors.forEach(error => { %>
-							<p><%= error.msg %></p>
+							<p class="errores"><%= error.msg %></p>
 						<% })
                         }%>
                             
@@ -35,13 +35,11 @@
                                 <label class="form-check-label" style="margin-top: 0.8%;">Recordarme</label>
                             </div>
                         </form>
-
-                        
                         <div class="pie-form">
                             <a href="/users/register">¿No tienes Cuenta? Registrate</a>
                         </div>
                     </div>
-                    <div class="inferior">
+                    <div class="inferior"><hr>
                         <a href="/">Volver</a>
                     </div>
                 </div>

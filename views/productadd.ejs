@@ -17,7 +17,7 @@
                         
                         <% if (locals.errors) {
                             errors.forEach(error => { %>
-                            <p><%= error.msg %></p>
+                            <p class="errores"><%= error.msg %></p>
                         <% })
                         }%>
                         <form method="post" action="/product/productadd" id="loginform" class="profile-form">
