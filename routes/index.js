@@ -19,6 +19,8 @@ router.get('/', productosController.index);
 router.get('/productadd', productosController.productadd);
 router.post('/productadd', productValidaciones, productosController.processProductadd);
 
+
+
 router.get('/searchresults', productosController.searchresults);
 router.get('/id/:product', productosController.product);
 
