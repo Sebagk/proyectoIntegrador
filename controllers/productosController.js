@@ -109,10 +109,66 @@ const productosController = {
           console.log(error);
       });
   }
+},
 
+  productedit: function(req, res) {
+    let form = req.body;
+    let asociacion = {
+          include: [{association: "usuario" }]
+      }
+      db.Producto.findByPk(form.id, asociacion)
+      .then(function (results) {
+        return res.render('productedit', {productos: results});
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
   },
 
-  searchresults: function (req, res) {
+  producteditInfo: function (req, res) {
+    let form = req.body;
+    let errors = validationResult(req);
+    if (errors.isEmpty()) {
+        let ubi = {
+            where: {
+                id: form.id
+            }
+        }
+        if (req.session.user != undefined) {
+            let id = req.session.user.id;
+
+            if (form.idUsuario == id) {
+                db.Product.update(form, ubi)
+                    .then((result) => {
+                        return res.redirect("/products/id/" + form.id)
+                    }).catch((err) => {
+                        return console.log(err);
+                    });
+            }
+            else {
+                return res.redirect("/users/profile/id/" + id);
+            }
+        }
+        else {
+            return res.redirect("/users/login");
+        }
+    }
+    else {
+        let criterio = {
+            include: [
+                { association: "usuario" }]
+          }
+        db.Producto.findByPk(form.id, criterio)
+        .then(function (results) {
+          return res.render('productedit', {errors: errors.mapped(), old: req.body, productos: results });
+        })
+        .catch((err) => {
+          return console.log(err);
+        });
+    }
+},
+
+  searchresults: function(req, res) {
     let search = req.query.search
     db.Product.findAll({
       where: {[op.or]: [

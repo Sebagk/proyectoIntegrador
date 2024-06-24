@@ -13,18 +13,17 @@ const commentValidaciones = [
     body('comentario').notEmpty().withMessage('El comentario no puede estar vacio').isLength({min: 3}).withMessage('El comentario debe tener al menos 3 caracteres')
 ]
 
-
 router.get('/', productosController.index);
 
 router.get('/productadd', productosController.productadd);
 router.post('/productadd', productValidaciones, productosController.processProductadd);
 
-
-
 router.get('/searchresults', productosController.searchresults);
 router.get('/id/:product', productosController.product);
 
-router.post('/id/:product', commentValidaciones, productosController.commentProcess)
+router.get('/productedit', productosController.productedit)
+router.post('/productedit', productValidaciones, productosController.producteditInfo)
 
+router.post('/id/:product', commentValidaciones, productosController.commentProcess)
 
 module.exports = router;
