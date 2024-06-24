@@ -25,6 +25,7 @@ const productosController = {
   product: function (req, res) {
     let id = req.params.product
     db.Product.findByPk(id, {
+      order: [[{model: db.Comment, as: 'comentarios'}, "createdAt", "DESC"]],
       include: [
         {association: "usuario"},
         {association: "comentarios", include: [{ association: "usuario" }] },
@@ -73,24 +74,25 @@ const productosController = {
   },
 
   commentProcess: function(req, res){
-    // let errors = validationResult(req)
-    // let form = req.body
-    // res.send(form)
-    // if (errors.isEmpty()) {
-    //   db.Comment.create({
-    //     lista: form.comment,
-    //     id_usuario: req.session.user.id,
-    //     id_productos: req.params.product}
-    //   )
-    //   .then(function(results){
-    //     return res.render('/product/id/' + req.params.product)
-    //   })
-    // }
-    // else{
-    //   return res.render('register', {errors: errors.array(), 
-    //     old: req.body
-    // });
-    // }
+    let errors = validationResult(req)
+    // return res.send(errors)
+    let form = req.body
+    // return res.send(form)
+    if (errors.isEmpty()) {
+      db.Comment.create({
+        comentario: form.comentario,
+        id_usuario: req.session.user.id,
+        id_productos: req.params.product}
+      )
+      .then(function(results){
+        return res.redirect('/product/id/' + req.params.product)
+      })
+    }
+    else{
+      return res.render('register', {errors: errors.array(), 
+        old: req.body
+    });
+    }
 
   },
 

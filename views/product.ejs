@@ -35,7 +35,7 @@
                 <% } %>
                 <hr>
                 <% if(locals.user != undefined){ %>
-                    <form class="form" action="#" method="post">
+                    <form class="form" action="/product/id/<%= lista.id %>" method="post">
                         <input class="form-input" type="text" value="" placeholder="Agregar comentario" name="comentario">
                         <button type="submit" class="btn">AGREGAR COMENTARIO</button>
                     </form>
