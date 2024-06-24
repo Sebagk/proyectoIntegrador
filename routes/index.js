@@ -26,4 +26,6 @@ router.post('/productedit', productValidaciones, productosController.productedit
 
 router.post('/id/:product', commentValidaciones, productosController.commentProcess)
 
+router.post('/delete', productosController.delete)
+
 module.exports = router;

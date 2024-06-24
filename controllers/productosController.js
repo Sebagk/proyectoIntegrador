@@ -188,7 +188,25 @@ const productosController = {
         lista: results
       })
     })
+    .catch(function(error) {
+      console.log(error);
+  });
   },
+
+  delete: function(req, res){
+    let form= req.body;
+    let id_usuario = form.id_usuario
+    // return res.send(form)
+    if(id_usuario == req.session.user.id){
+      db.Product.destroy({where: {id: form.id}})
+      .then(function(result){
+        return res.redirect('/')
+      })
+      .catch(function(error) {
+        console.log(error);
+    });
+    }
+  }
 };
 
 module.exports = productosController;
