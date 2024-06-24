@@ -436,6 +436,7 @@ hr {
 }
 .comments {
   padding: 30px 15px 15px 0;
+  
 }
 .comments article{
   margin-bottom: 7.5px;
@@ -460,6 +461,12 @@ hr {
 .comments .user{
   font-size: 1.7em;
 }
+.comments-nombre{
+  padding: 30px 15px 15px 0;
+  font-size: 1.7em;
+
+}
+
 
 /*====== Formularios ======*/
 .form-label {
@@ -540,7 +547,19 @@ textarea.form-input {
   background-color: var(--dark-blue);
   cursor: pointer;
 }
+.btn-delete{
+  background-color: grey;
+  padding: 10px 20px;
+  border-radius: 200px;
+  color: #fff;
+  border: none;
+  margin-top: 14px;
+}
 
+.btn-delete:hover {
+  background-color: darkred;
+  cursor: pointer;
+}
 
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {
