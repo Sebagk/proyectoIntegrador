@@ -52,14 +52,12 @@
                 <% } else{ %>
                     <p id="editar">Debes estar logueado para comentar</p>
                 <% } %>
-                <% if (locals.errors) {
-                    errors.forEach(error => { %>
+                <% if (locals.errors) { %>
+                   <% errors.forEach(error => { %>
                     <h2 class="errores"><%= error.msg %></h2>
-                <% })
-                }
-                %>
+                <% }) 
+                 } %>
             </div>
-            
         </div>
     </div>
 </div>
