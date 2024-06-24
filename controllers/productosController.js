@@ -111,62 +111,31 @@ const productosController = {
   }
 },
 
-  productedit: function(req, res) {
-    let form = req.body;
-    let asociacion = {
-          include: [{association: "usuario" }]
-      }
-      db.Producto.findByPk(form.id, asociacion)
-      .then(function (results) {
-        return res.render('productedit', {productos: results});
+  edit: function(req, res) {
+  let relaciones = {
+    include: [
+      { association: 'comentarios', include: ['usuario'] },
+      { association: 'usuario' }
+  ]
+  }
+  db.Product.findByPk(req.params.id, relaciones)
+      .then(function (data) {
+          res.render('productedit', { data });
       })
-      .catch(function(error) {
-        console.log(error);
-      });
+      .catch(function (error) {
+          res.send(error);
+      })
   },
 
-  producteditInfo: function (req, res) {
-    let form = req.body;
-    let errors = validationResult(req);
-    if (errors.isEmpty()) {
-        let ubi = {
-            where: {
-                id: form.id
-            }
-        }
-        if (req.session.user != undefined) {
-            let id = req.session.user.id;
-
-            if (form.idUsuario == id) {
-                db.Product.update(form, ubi)
-                    .then((result) => {
-                        return res.redirect("/products/id/" + form.id)
-                    }).catch((err) => {
-                        return console.log(err);
-                    });
-            }
-            else {
-                return res.redirect("/users/profile/id/" + id);
-            }
-        }
-        else {
-            return res.redirect("/users/login");
-        }
-    }
-    else {
-        let criterio = {
-            include: [
-                { association: "usuario" }]
-          }
-        db.Producto.findByPk(form.id, criterio)
-        .then(function (results) {
-          return res.render('productedit', {errors: errors.mapped(), old: req.body, productos: results });
-        })
-        .catch((err) => {
-          return console.log(err);
-        });
-    }
-},
+  updateProduct: function(req, res) {
+    db.Product.update(req.body, { where: { id: req.params.id } })
+    .then(function() {
+      res.redirect('/')
+    })
+    .catch(function(error) {
+    res.send(error);
+    })
+  },
 
   searchresults: function(req, res) {
     let search = req.query.search

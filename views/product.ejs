@@ -4,18 +4,18 @@
 	<%- include('./partials/header')  %>
 <% } %>
 <div class="container products-wrapper">
-    <div class="d-flex align-items-center">
+    <div style="display: flex; align-items: center; justify-content: space-around;" >
         
         <h2 class="products-title"><%= lista.nombre %></h2>
         <p class="product-detail-description">
             <% if(locals.user != undefined && locals.user.id == lista.id_usuario){ %>
-                <a id="editar" href="/product/productedit">Editar</a>
+                <a id="editar" href="/product/edit/<%= lista.id %>" >Editar</a>
                 <form action="/product/delete" method="POST">
                     <input type="hidden" name="id" value="<%= lista.id %>">
                     <input type="hidden" name="id_usuario" value="<%= lista.id_usuario %>">
-                    <button class="btn-delete" type="sumbit">
-                        🗑️
-                    </button>
+                    <button class="btn-delete" style=" background-color: red; font-size: large; font-weight: bold;" type="submit">
+                        Eliminar
+                    </button>                    
                 </form>
             <% } %>
         </p>
@@ -26,7 +26,7 @@
                 <img src="<%= lista.imagen %>" alt="" class="product-detail-img">
                 <p class="product-detail-description">
                 <%= lista.descripcion %></p>
-                    <a class="comments-nombre" href="/users/id/<%= lista.id_usuario %>">Publicado por: <strong><%= lista.usuario.usuario %></strong></a>
+                    <a class="comments-nombre" style="justify-content: center; display: flex" href="/users/id/<%= lista.id_usuario %>">Publicado por: "<strong><%= lista.usuario.usuario %></strong>"</a>
             </article>
 
             <div class="col-12 col-lg-4">

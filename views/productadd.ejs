@@ -15,8 +15,8 @@
                 <div id="central">
                     <div id="login" style="padding: 30px 45px">
                         
-                        <% if (locals.errors) {
-                            errors.forEach(error => { %>
+                        <% if (locals.errors) { %>
+                           <% errors.forEach(error => { %>
                             <p class="errores"><%= error.msg %></p>
                         <% })
                         }%>

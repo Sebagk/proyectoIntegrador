@@ -373,7 +373,16 @@ hr {
   padding: 0 15px;
   display: flex;
   flex-direction: column;
+  padding-top: 30px;
 }
+
+/*#productedit-form{
+  display: flex;
+  padding: inherit;
+  flex-direction: column;
+  align-content: stretch;
+}*/
+
 .small {
   font-size: 1.8em;
   color: var(--green);

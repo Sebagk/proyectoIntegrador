@@ -21,8 +21,8 @@ router.post('/productadd', productValidaciones, productosController.processProdu
 router.get('/searchresults', productosController.searchresults);
 router.get('/id/:product', productosController.product);
 
-router.get('/productedit', productosController.productedit)
-router.post('/productedit', productValidaciones, productosController.producteditInfo)
+router.get('/edit/:id', productosController.edit);
+router.post('/edit/:id', productValidaciones, productosController.updateProduct);
 
 router.post('/id/:product', commentValidaciones, productosController.commentProcess)
 
