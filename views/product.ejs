@@ -43,6 +43,12 @@
                 <% } else{ %>
                     <p id="editar">Debes estar logueado para comentar</p>
                 <% } %>
+                <% if (locals.errors) {
+                    errors.forEach(error => { %>
+                    <h2 class="errores"><%= error.msg %></h2>
+                <% })
+                }
+                %>
             </div>
             <article>
                 <a class="comments" href="/users/id/<%= lista.id_usuario %>">Publicado por: <%= lista.usuario.usuario %></a>
