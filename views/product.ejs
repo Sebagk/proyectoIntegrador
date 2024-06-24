@@ -5,7 +5,7 @@
 <% } %>
 <div class="container products-wrapper">
     <div class="d-flex align-items-center">
-        <h2 class="products-title"><%= lista.nombre %></h2> 
+        <h2 class="products-title"><%= lista.nombre %> : <a href="/users/id/<%= lista.id_usuario %>"><%= lista.usuario.usuario %></a></h2> 
         <p class="product-detail-description">
             <% if(locals.user != undefined && locals.user.id == lista.id_usuario){ %>
                 <a id="editar" href="/product/productedit">Editar</a>
