@@ -87,12 +87,28 @@ const productosController = {
       .then(function(results){
         return res.redirect('/product/id/' + req.params.product)
       })
+      .catch(function(error){
+        console.log(error);
+    })
     }
-    else{
-      return res.render('register', {errors: errors.array(), 
-        old: req.body
-    });
-    }
+    else {
+      db.Product.findByPk(req.params.product, {
+          include: [
+              { association: 'comentarios', include: ['usuario'] },
+              { association: 'usuario' }
+          ]
+      })
+      .then(function(producto) {
+          return res.render('product', {
+              lista: producto,
+              errors: errors.array(),
+              old: req.body,
+          });
+      })
+      .catch(function(error) {
+          console.log(error);
+      });
+  }
 
   },
 
