@@ -40,7 +40,6 @@ const loginValidaciones = [
     body('password')
         .notEmpty().withMessage('El campo Contraseña es obligatorio.').bail()
         .custom(function(value, {req}){
-
             return db.User.findOne({
                 where: { usuario: req.body.usuario }})
             .then(function(user){
@@ -56,22 +55,11 @@ const loginValidaciones = [
     })
 ]
 
-const editValidations = [
-    body ("email").isEmail().withMessage("Debes completar el campo de Email")
-    .custom(function(value){
-        return db.User.findOne({
-            where: {email: value},
-        })
-        .then(function(user){
-            if(user){
-                throw new Error('El email ingresado ya existe.');
-            }
-        })
-    }),
+const editValidaciones = [
+    body ("email").isEmail().withMessage("Debes completar el campo de Email"),
     body('usuario').notEmpty().withMessage("Debes completar el campo de Usuario"),
-    body('contrasenia').notEmpty().withMessage("Debes completar el campo de Contraseña").isLength({min: 4}).withMessage('La contraseña debe tener al menos 4 caracteres'),
     body("fecha_nacimiento").notEmpty().withMessage("Debes completar el campo de Fecha de Nacimiento"),
-    body("dni").isInt().withMessage("Debes completar el campo de Documento"),
+    body("dni").isInt().withMessage("Debes completar el campo de Documento")
 ]
 
 /* GET users listing. */
@@ -84,7 +72,7 @@ router.get('/login', usuariosController.login);//mostrar vista de Login
 router.post('/login', loginValidaciones, usuariosController.processLogin);//Procesar Login
 
 router.get('/profileedit', usuariosController.profileedit);
-router.post('/profileedit', validaciones, usuariosController.profileeditInfo);
+router.post('/profileedit', editValidaciones, usuariosController.profileeditInfo);
 
 router.post('/logout', usuariosController.logout);
 

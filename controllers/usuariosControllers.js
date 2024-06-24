@@ -1,6 +1,7 @@
 const db = require('../database/models')
 const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
+const { product } = require('./productosController');
 //const { Association } = require('sequelize');
 
 const usuariosController = {
@@ -13,18 +14,11 @@ const usuariosController = {
                 {association: "productos"}
             ]})
         .then(function (usuario){
-            //return res.send(usuario)
             return res.render("profile", {usuario: usuario, id: id})
         })
         .catch(function (error) {
             return console.log(error);
-          });
-        
-        /*let resultado = db.usuarios[0];
-        return res.render('profile', {
-            usuario : resultado,
-            productos: db.productos
-        })*/;
+        });
     },
 
     register : function(req, res){
@@ -81,8 +75,8 @@ const usuariosController = {
             })
             .then(function (usuarioEncontrado) {
                 req.session.user = usuarioEncontrado
-                if(req.body.recordarme != undefined){
-                    res.cookie('userId', usuarioEncontrado.id , {maxAge: 1000*60*123123123})
+                if(req.body.recordarUsuario != undefined){
+                    res.cookie('userId', usuarioEncontrado.id , {maxAge: 1000*60*123123})
                 }
                 return res.redirect('/')
             })
@@ -104,13 +98,12 @@ const usuariosController = {
         res.redirect("/")
     },
 
-    profileedit : function(req, res){
-        let id = req.session.user.id  
+    profileedit : function(req, res){ 
         //cambiar la condicion de aca abajo para que tambien coincida el id
-        if (req.session.user != undefined) {  
+        if (req.session.user != undefined) { 
+            let id = req.session.user.id 
             db.User.findByPk(id)
             .then(function (resultado){
-                // return res.send(resultado)
                 return res.render('profileedit', {usuario: resultado})
             })
             .catch(function(e){
@@ -118,28 +111,27 @@ const usuariosController = {
             })
         }
         else {
-            return res.redirect("/");
+            return res.redirect("login");
         }
     },
 
     profileeditInfo: function (req,res) {
-        let id = req.session.user.id;
+        let idSession = req.session.user.id;
         let form = req.body;
         let errors = validationResult(req);
         //return res.send(errors)
         if (errors.isEmpty()){
-            let user = {
+            let usuario = {
                 usuario: form.usuario,
                 email: form.email,
                 contrasenia: bcrypt.hashSync(form.contrasenia, 10),
                 fecha_nacimiento: form.fecha_nacimiento,
                 dni: form.dni,
                 imagen_de_perfil: form.imagen_de_perfil
-
         };
-        db.User.update(user, {where: {id:id}})
+        db.User.update(usuario, {where: {id:idSession}})
         .then(function(results){
-            return res.redirect(`/users/id/${id}`);
+            return res.redirect(`id/${idSession}`);
         })
         .catch(function(e){
             console.log(e);

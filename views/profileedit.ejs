@@ -22,25 +22,27 @@
 						<% })
 						}
 						%>
+                        <br>
 
                         <form action="/users/profileedit" method="post" id="loginform" class="profile-form">
 
                             <input type="text" name="email" placeholder="Email" class="profile-form-input"
-                            value="<%= usuario.email %>">
+                            value="<%= (locals.old && locals.old.email != undefined) ? locals.old.email : (user && user.email) %>">
 
                             <input type="text" name="usuario" placeholder="Nombre de usuario" class="profile-form-input"
-                            value="<%= usuario.usuario %>"> 
+                            value="<%= (locals.old && locals.old.usuario != undefined) ? locals.old.usuario : (user && user.usuario) %>"> 
 
-                            <input type="password" name="contrasenia" placeholder="Contraseña" class="profile-form-input">
+                            <input type="password" name="contrasenia" placeholder="Contraseña" class="profile-form-input"
+                            value="">
 
                             <input type="date" name="fecha_nacimiento" placeholder="Fecha de nacimiento" class="profile-form-input"
-                            value="<%= usuario.fecha_nacimiento %>">
+                            value="<%= (locals.old && locals.old.fecha_nacimiento != undefined) ? locals.old.fecha_nacimiento: (user && user.fecha_nacimiento) %>">
 
                             <input type="number" name="dni" placeholder="Numero de documento" class="profile-form-input"
-                            value="<%= usuario.dni %>">
+                            value="<%= (locals.old && locals.old.dni != undefined) ? locals.old.dni : (user && user.dni) %>">
 
                             <input type="text" name="imagen_de_perfil" placeholder="Imagen de perfil (URL)" class="profile-form-input"
-                            value="<%= usuario.imagen_de_perfil %>">
+                            value="<%= (locals.old && locals.old.imagen_de_perfil != undefined) ? locals.old.imagen_de_perfil: (user && user.imagen_de_perfil) %>">
 
                             <button type="submit" title="Ingresar" class="btn">Actualizar datos</button>
 
