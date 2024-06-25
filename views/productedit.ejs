@@ -19,7 +19,7 @@
 										 <p class="errores"><%= error.msg %></p>
 									 <% })
 									 }%>
-									<form method="post" action="/products/<%= data.id %>/edit" id="loginform" class="profile-form">
+									<form method="post" action="/product/edit/<%= data.id %>" id="loginform" class="profile-form">
 										<input  type="text" name="nombre" value="<%= data.nombre %>" class="profile-form-input">	
 										
 										<input type="text" name="descripcion" value="<%= data.descripcion %>" class="profile-form-input">
