@@ -4,12 +4,10 @@
 	<%- include('./partials/header')  %>
 <% } %>
 <div class="container products-wrapper">
-    <div style="display: flex; align-items: center; justify-content: space-around;" >
-        
-        <h2 class="products-title"><%= lista.nombre %></h2>
+    <div style="display: flex; align-items: center; justify-content: center;">
         <p class="product-detail-description">
             <% if(locals.user != undefined && locals.user.id == lista.id_usuario){ %>
-                <a id="editar" href="/product/edit/<%= lista.id %>" >Editar</a>
+                <a id="editar" href="/product/edit/<%= lista.id %>"  style="padding: 0px 30px">Editar <i class="fas fa-cog"></i> </a>
                 <form action="/product/delete" method="POST">
                     <input type="hidden" name="id" value="<%= lista.id %>">
                     <input type="hidden" name="id_usuario" value="<%= lista.id_usuario %>">
@@ -20,13 +18,16 @@
             <% } %>
         </p>
     </div>
+    <div style="display: flex; align-items: center; justify-content: space-around; background-color: lightgrey;" >
+        <h2 class="products-title" id="titulo-p"><%= lista.nombre %></h2>
+    </div>
     <div class="product-detail">
         <div class="row">
-            <article class="col-12 col-lg-8 product-detail-info">
+            <article class="col-12 col-lg-8 product-detail-info" style="padding: 0;">
                 <img src="<%= lista.imagen %>" alt="" class="product-detail-img">
                 <p class="product-detail-description">
                 <%= lista.descripcion %></p>
-                    <a class="comments-nombre" style="justify-content: center; display: flex" href="/users/id/<%= lista.id_usuario %>">Publicado por: "<strong><%= lista.usuario.usuario %></strong>"</a>
+                    <a class="comments-nombre" style="justify-content: center; display: flex; background-color: lightgrey; padding: 40px 0px 40px 0px ;" href="/users/id/<%= lista.id_usuario %>">Publicado por: "<strong><%= lista.usuario.usuario %></strong>"</a>
             </article>
 
             <div class="col-12 col-lg-4">
@@ -50,7 +51,7 @@
                     </form>
                     <hr>
                 <% } else{ %>
-                    <p id="editar">Debes estar logueado para comentar</p>
+                    <p id="editarr">Debes estar logueado para comentar</p>
                 <% } %>
                 <% if (locals.errors) { %>
                    <% errors.forEach(error => { %>

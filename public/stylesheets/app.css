@@ -225,12 +225,12 @@ hr {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .product-box_data h2 {
   font-size: 2.4em;
   font-weight: 300;
-  margin: 0;
 }
 
 .product-box_data span {
@@ -333,6 +333,14 @@ hr {
   overflow: hidden;
 }
 
+#titulo-p {
+  font-family: sans-serif;
+  color: black;
+  text-decoration: none;
+  font-stretch: expanded;
+  font-weight: bold;
+}
+
 .product-detail-img {
   width: 70%;
   display: flex;
@@ -357,8 +365,14 @@ hr {
   font-size: 30px;
 }
 
+#editarr{
+  font-family: "Kanit", sans-serif;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: underline;
+}
+
 .product-detail-description {
-  padding: 15px 15px 15px 40px;
   font-family: "Oswald", serif;
   font-size: 40px;
   line-height: 1.5;
@@ -375,13 +389,6 @@ hr {
   flex-direction: column;
   padding-top: 30px;
 }
-
-/*#productedit-form{
-  display: flex;
-  padding: inherit;
-  flex-direction: column;
-  align-content: stretch;
-}*/
 
 .small {
   font-size: 1.8em;
@@ -513,7 +520,7 @@ textarea.form-input {
 }
 
 #login {
-  padding: 40px;
+  padding: 30px 80px
 }
 
 .profile-form-input{
